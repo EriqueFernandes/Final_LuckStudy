@@ -1,0 +1,76 @@
+# Introdução à Modelagem Matemática - Questões
+id: 1
+texto: 'A respectiva média aritmética dos números 9, 8, 8, 9, 2, 7, 5 ,2, 3, 4 é:' 
+options:
+  - A : '9'
+    correct: False
+    reason: 'A média possui um resultado menor que esse.' 
+
+  - B : '7'
+    correct: False
+    reason: 'A média possui um resultado menor que esse.'
+ 
+  - C : '5.6'
+    correct: False
+    reason: 'A média possui um resultado maior que esse.'
+ 
+  - D : 'Nenhuma das respostas anteriores.'
+    correct: True
+    reason: 'A média é dada pela soma dos números (57) dividida pela quantidade (10), o que resulta em 5,7.'
+---
+id: 2
+texto: 'Dado uma sequência finita de números reais \( x_{1},x_{2},x_{3}, ..., x_{n} \), e média m, a soma dos erros médios ao quadrado é dada por:' 
+options:
+  - A : ' \( \sum_{i = 1}^{n} (x_{i} - m)^2 \) '
+    correct: True
+    reason: 'Convém da definição!' 
+
+  - B : ' \( \sum_{i = 1}^{n} x_{i}^2 - m^2 \)'
+    correct: False
+    reason: 'Não é a aplicação certa da definição em um somatório.'
+ 
+  - C : ' \( \sum_{i = 1}^{n} \dfrac{x^2_{i}}{m} - m \)'
+    correct: False
+    reason: 'Não é a aplicação certa da definição em um somatório.'
+ 
+  - D : 'Nenhuma das respostas anteriores'
+    correct: False
+    reason: 'Olhe com mais calma! Veja o que significaria cada somatório.'
+---
+id: 3
+texto: 'Escolha em qual das situações abaixo não seria bem representada em modelagem a partir de uma distribuição normal de dados:' 
+options:
+  - A : 'Altura da população brasileira.'
+    correct: False
+    reason: 'A altura possui resultados próximos a média e poucos que não são significativos nos extremos.' 
+
+  - B : 'Resultado da soma de 10 números naturais aleatórios menores que 5.'
+    correct: False
+    reason: 'A maior chance de resultados ocorrerem ficam próximos à média.'
+ 
+  - C : 'Quantidade de palavras de um texto.'
+    correct: True
+    reason: 'Existe uma quantidade significativa de palavras que aparecem mais que a média  (preposições, por exemplo) que sua modelagem seria bem melhor descrita por uma relação de Lei de Potência.'
+ 
+  - D : 'Quantidade anual de chuva (em milímetros) em uma cidade.'
+    correct: False 
+    reason: 'De fato, os resultados tendem sempre a serem mais próximos da média.'
+---
+id: 4
+texto: 'Em um jogo Nim, são dispostos 100 palitos e os jogadores A e B devem retirar pelo menos um palito, jogando alternadamente.A quantidade máxima de palitos que podem ser retirados é 6. Diante disso, se A começar, determine quem vence e qual a primeira jogada.' 
+options:
+  - A : 'A, retirando 2 palitos'
+    correct: False
+    reason: 'Se A fizer isso, B vence retirando 6 palitos.(Descubra o porquê!)' 
+
+  - B : 'B, retirando 5 palitos após qualquer jogada de A'
+    correct: False
+    reason: 'A pode forçar uma vitória se souber jogar.'
+ 
+  - C : 'A vence retirando 1 palito'
+    correct: True
+    reason: 'Se A fizer isso, B sempre é forçado a enfrentar posições com 7n + 1 palitos, que o levará a derrota.'
+ 
+  - D : 'A vence retirando 3 palitos'
+    correct: False
+    reason: 'B vencerá se A fizer isso, retirando na sua vez 5 palitos.(Descubra o porquê!)'

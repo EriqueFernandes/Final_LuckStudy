@@ -1,0 +1,40 @@
+---
+texto: 'Determine a derivada de \(y = x^2\), em relação a x.'
+options:
+  - A : '\(2x\)'
+    correct: True 
+    reason: 'Segue-se diretamente aplicando a fórmula da derivada de uma potência.'
+
+  - B : '\(2\)'
+    correct: False
+    reason: 'O x não desaparece quando é aplicada a fórmula da derivada da potência.'
+
+  - C : '\(x^3\)'
+    correct: False
+    reason: 'O expoente é decrescido em 1 quando se é aplicado a fórmula da derivada da potência.'
+
+  - D : '\(\dfrac{x}{2}\)'
+    correct: False
+    reason: 'A aplicação da fórmula da derivada de uma potência foi incorreta.'
+---
+texto: 'Qual a derivada da função \(f(x) = mx\) com \(m\) constante?'
+options:
+  - A : '\(m\)'
+    correct: True
+    reason: 'Segue-se da regra de derivação com uma constante.'
+# ---
+
+#  B : 
+#   - afirmative: '\(mx\)'
+#   - correct: False
+#   - reason: 'O x não faz parte nessa derivada.'
+ 
+#  C : 
+#   - afirmative: '\(mx\)'
+#   - correct: False 
+#   - reason: 'Não há motivo para o m estar elevado ao quadrado.'
+ 
+#  D : 
+#   - afirmative: '\(0\)'
+#   - correct: False
+#   - reason: 'Não há somente uma constante em \(f(x)\)'

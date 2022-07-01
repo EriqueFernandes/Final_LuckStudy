@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/choose.css">
+    <title>Lucky Study | Choose</title>
+</head>
+
+<body>
+    <button id="home">SAIR</button>
+    <button class="butoes" id="btn_1" >Introdução à computação</button>
+    <button class="butoes" id="btn_2" >Cálculo em uma variável</button>
+    <button class="butoes" id="btn_3" >Geometria analítica</button>
+    <button class="butoes" id="btn_4" >Fundamentos da matemática</button>
+    <button class="butoes" id="btn_5" >Introdução à modelagem matemática</button>
+    {% if materia %}
+
+    <p>{{materia}}</p>
+    
+    {% endif %}
+    <script src="../static/js/choose.js"></script>
+</body>
+
+</html>

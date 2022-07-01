@@ -1,0 +1,76 @@
+#Fundamentos da Matemática - Questões
+id: 1
+texto: 'Qual das seguintes frases abaixo NÃO é uma proposição?'
+options:
+  - A : '2 + 3 = 1'
+    correct: False
+    reason: 'Pode-se atribuir valor verdadeiro ou falso a essa frase.' 
+
+  - B : 'Hoje está fazendo 35° Celsius.'
+    correct: False
+    reason: 'Pode-se atribuir valor verdadeiro ou falso a essa frase.'
+ 
+  - C : 'Pedro é mais alto que João.'
+    correct: False
+    reason: 'Pode-se atribuir valor verdadeiro ou falso a essa frase.'
+ 
+  - D : 'Amanhã será um dia legal.'
+    correct: True
+    reason: 'A frase só se torna uma proposição se soubermos exatamente o que "legal" significa.' 
+---
+id: 2
+texto: 'Qual o dígito das unidades de \( 2^{961} \)?'
+options:
+  - A : '9'
+    correct: False
+    reason: 'Número que termina em 9 não é par!' 
+
+  - B : '8'
+    correct: False
+    reason: 'Observe com mais calma a sequência das potências de 2 e seu padrão.'
+ 
+  - C : '6'
+    correct: False
+    reason: 'Observe com mais calma a sequência das potências de 2 e seu padrão.'
+ 
+  - D : '2'
+    correct: True
+    reason: 'Há um padrão de 4 em 4 nas potências de dois, repetindo as unidades. Como \(961 = 4 * 240 + 1 \),implica que \(2^{961} \congruent 2^1\) '
+---
+id: 3
+texto: 'Sobre a equação \( \sqrt{x^2 +1} = x + 3, x \in \mathbb{R} \), podemos afirmar que:'
+options:
+  - A : 'Há duas soluções para x.'
+    correct: False
+    reason: 'As supostas soluções encontradas não atendem ou à condição de existência da raiz, ou à própria equação em si.' 
+
+  - B : 'Há uma solução para x e ela é irracional'
+    correct: False
+    reason: 'Não há como um irracional ser solução da equação.'
+ 
+  - C : 'Há uma solução para x e ela é racional.'
+    correct: False
+    reason: 'Não há como um racional ser solução da equação.'
+ 
+  - D : 'Não há soluções para x.'
+    correct: True
+    reason: 'De fato, se resolvêssemos a equação, encontraria-se \(x = -4\). Mas, \(-4 + 3 < 0 \), o que não satisfaz a condição de existência da matriz.'
+---
+id: 4
+texto: '(OBMEP - Adaptada) Qual a negação de "Todos os meus chapéus são verdes"?'
+options:
+  - A : 'Nenhum chapéu meu é verde'
+    correct: False
+    reason: 'O contrário de todos não é necessariamente nenhum.' 
+
+  - B : 'Apenas um chapéu meu é verde'
+    correct: False
+    reason: 'Nada se garante sobre a quantidade, podem haver dois chapéus verdes que não são todos.'
+ 
+  - C : 'Algum chapéu meu não é verde'
+    correct: True
+    reason: 'De fato, para contrariar a afrimação basta encontrar um contra-exemplo.'
+ 
+  - D : 'Não tenho chapéus'
+    correct: False
+    reason: 'Deve haver pelo menos um chapéu, para se afirmar sobre ele(s).'

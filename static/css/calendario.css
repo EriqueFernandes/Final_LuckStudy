@@ -1,0 +1,63 @@
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#222, #000);
+}
+
+h1{
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 3px 3px #00f;
+}
+
+h2{
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 3px 3px #00f;
+}
+
+.container{
+    display: flex;
+}
+
+.container_calendario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.day{
+    width: 13.2%;
+    height: 18%;
+    border: 3px solid #c2c;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+button{
+    margin: 5%;
+    font-size: 3em;
+    background-color: #fff;
+    color: #f00;
+    border: none;
+}
+
+#past_btn{
+    transform: rotate(180deg);
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

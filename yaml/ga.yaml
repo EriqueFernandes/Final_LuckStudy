@@ -1,0 +1,101 @@
+#Questões - Geometria Analítica
+---
+id: 1
+texto: 'Determine as coordenadas do ponto de interseção \(P = (x,y)\) das retas \(r: y = 2x\) e \(s: y = -4x + 6\).'
+options:
+  - A : '\(P = (2,9)\)'
+    correct: False
+    reason: 'O ponto \((2,9)\) não satisfaz às equações das retas ao mesmo tempo.'
+
+  - B : '\(P = (3,9)\)'
+    correct: False
+    reason: 'O ponto \((3,9)\) não satisfaz às equações das retas ao mesmo tempo.'
+
+  - C : '\(P = (3,1)\)'
+    correct: False
+    reason: 'O ponto \((3,1)\) não satisfaz às equações das retas ao mesmo tempo.'
+
+  - D : '\(P = (1,2)\)'
+    correct: True
+    reason: 'O ponto \((2,1)\) satisfaz às equações das retas ao mesmo tempo.'
+---
+id: 2  
+texto: 'Quanto mede o eixo maior da elipse \(\dfrac{x^2}{35} + \dfrac{y^2}{25} = 1 \)?'
+options:
+  - A : '\(70\)'
+    correct: False
+    reason: '35 é o quadrado do semieixo maior, não o semieixo em si.'
+
+  - B : '\(\sqrt{50}\)'
+    correct: False
+    reason: 'Você encontrou o dobro do quadrado do semieixo menor.'
+
+  - C : '\( 25\)'
+    correct: False
+    reason: '25 é o valor do quadrado do semieixo menor.'
+  
+  - D : '\(2 \sqrt{35}\)'
+    correct: True
+    reason: 'De fato, esse valor é o dobro da raiz do quadrado do semieixo, que dá o prório eixo maior.'
+---
+id: 3
+texto: 'Encontre o raio r da circunferência \( x^2 + y^2 = 9 \), e calcule a intersecção P dela com a reta \(y = 2x + 9 \), se houver.'
+options:
+  - A : '\(r = 9, P = (2, \sqrt{5})\)'
+    correct: False
+    reason: '\( r = \sqrt{9} = 3\)'
+
+  - B : '\(r = 3, P = (0,3)\)'
+    correct: False
+    reason: 'O valor de P não satisfaz à equação da reta.'
+    
+  - C : '\(r = 3, \nexists P\)'
+    correct: True
+    reason: 'De fato,\( r = \sqrt{9} = 3\; \Delta < 0) o que indica que \(\nexists P).  '
+ 
+  - D : '\( r = 9, \nexists P\)'
+    correct: False
+    reason: '\( r = \sqrt{9} = 3\)'
+---
+id: 4
+texto: 'Dados os pontos \( A = (0,3), B = (1,6), C = (4,3) \), encontre os vetores \(AB, AC\) e calcule a área \(S\) do triângulo formado por esses pontos.'
+options:
+  - A : '\( AB = (1,3); AC = (0,4); S = 6\)'
+    correct: False
+    reason: 'As coordenadas de AC estão trocadas, e a área não é 6.'
+
+  - B : '\( AB = (1,3); AC = (4,0); S = 3\)'
+    correct: True
+    reason: 'De fato, AB = B - A, AC = C - A, e a área S é dada pela metade do módulo do determinante conforme fórmula.'
+
+  - C : '\( AB = (3,1); AC = (0,4); S = 6\)'
+    correct: False
+    reason: 'As coordenadas de AB estão trocadas, e o valor da área não é 6.'
+ 
+  - D : '\( AB = (1,9); AC = (4,6); S = 6\)'
+    correct: False
+    reason: 'AB = B - A, e não AB = B + A. A propriedade também vale para AC. Tente novamente!'
+---
+id: 5
+texto: 'Encontre o ponto D do paralelogramo ABCD, em que A = (1,3), B = (2,6), C = (4, 7)'
+options:
+  - A: '\(D =(10,5) \)'
+    correct: False
+    reason: '\( AC \neq BD \)'
+
+  - B : '\(D = (4,3) \)'
+    correct: False
+    reason: 'Coordenadas de D invertidas!.'
+
+  - C : '\(D =(3,4) \)'
+    correct: True
+    reason: 'Como os vetores AB e CD são iguais, \( B - A = D - C \). Assim, encontra-se D.'
+ 
+  - D : 'Nenhuma das respostas anteriores'
+    correct: False
+    reason: 'Cheque novamente as alternativas.'
+# ---
+#id: 6  
+# texto: 'Calcule a diagonal de um cubo com lado (\x\).'
+# answer:
+# ---

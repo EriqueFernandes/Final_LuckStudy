@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Lucky Study | Home</title>
+</head>
+<body>
+    <button id="home">SAIR</button>
+    <section>
+        <form method="post" action="/login"  class="container">
+            <h2>Bem-vindo!</h2>
+            <div class="login">
+                {% if invalido %}
+                <p>{{invalido}}</p>
+                {% endif %}
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Nome">
+                <input type="submit" id="submit_btn">
+            </div>
+        </form>
+        <div class="usuarios">
+            <h2>Usuários</h2>
+            <div class="name_users">
+                <ul id="lista_users">
+                    {%for jogador in jogadores%}
+
+                    <li><a href="/choose/{{jogador['nome']}}">{{jogador["nome"]}}</a></li>
+                    
+                    {% endfor %}
+                </ul>
+                <div class="container_buttons">
+                    <button class="btns_control" id="btn_up"><span>></span></button>
+                    <button class="btns_control" id="btn_down"><span>></span></button>
+                </div>
+            </div>
+        </div>
+        <div id="segundo_plano"></div>
+        <div id="show_this">
+            <h3>
+                Digite seu nome!
+            </h3>
+        </div>
+    </section>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

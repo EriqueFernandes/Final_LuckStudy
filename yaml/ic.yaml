@@ -1,0 +1,100 @@
+# Questões - Introdução à Computação
+id: 1
+texto: 'Na linguagem C, qual das funções abaixo é utilizada especificamente para mostrar resultados (outputs) ao usuário?'
+options:
+  - A : 'scanf()'
+    correct: False
+    reason: 'Essa função é utilizada para pedir informações ao usuário'
+ 
+  - B : 'printf()'
+    correct: True
+    reason: 'A função printf foi designada para isso.'
+ 
+  - C : 'if()'
+    correct: False 
+    reason: 'Essa função é uma condicional.'
+ 
+  - D : 'main()'
+    correct: False
+    reason: 'Essa não é a função que especificamente faz isso, apesar de poder ter alguma em seu escopo que o faz.'
+---
+id: 2
+texto: if((a < 10 && a > 0) || b < 4){...}'. Na linguagem C, qual um possível valor para as variáveis a e b para que a função if seja executada,supondo-as variáveis do tipo int?
+options:
+  - A : 'a = -3, b = 5'
+    correct: False
+    reason: 'Nenhuma das condições é satisfeita.'
+
+  - B : 'a = 10, b = 4'
+    correct: False
+    reason: 'Nenhuma das condições é satisfeita'
+  
+  - C : 'a = 3, b = 5'
+    correct: False 
+    reason: 'Uma das condições de || é satisfeita, portanto será executado.'
+ 
+  - D : 'Nenhuma das respostas anteriores.'
+    correct: False
+    reason: 'Considere alguma das respostas anteriores! Algo pode ter passado despercebido!'
+---
+id: 3
+texto: Qual das seguintes tags em HTML é feita para indicar uma tabela?
+options:
+  - A : '<html></html>'
+    correct: False
+    reason: 'Essa tag indica o início/fim de um arquivo html.'
+  
+  - B : '<body></body>'
+    correct: False
+    reason: 'Essa tag indica o início/fim do corpo da página html.'
+  
+  - C : '<h1></h1>'
+    correct: False 
+    reason: 'Essa tag indica uma seção de título.'
+ 
+  - D : 'Nenhuma das respostas anteriores.'
+    correct: True
+    reason: 'A tag correta é <table></table>.'
+---
+id: 4
+texto: Qual das seguintes tags em HTML é feita para indicar uma tabela?
+options:
+  - A : '<html></html>'
+    correct: False
+    reason: 'Essa tag indica o início/fim de um arquivo html.'
+
+  - B : '<body></body>'
+    correct: False
+    reason: 'Essa tag indica o início/fim do corpo da página html.'
+ 
+  - C : '<h1></h1>'
+    correct: False 
+    reason: 'Essa tag indica uma seção de título.'
+ 
+  - D : 'Nenhuma das respostas anteriores.'
+    correct: True
+    reason: 'A tag correta é <table></table>.'
+---
+id: 5
+texto: 'Qual das liguagens abaixo é considerada uma linguagem consultiva?'
+options:
+  - A : 'C'
+    correct: False
+    reason: 'C é considerada como declarativa.'
+
+  - B : 'Pyhton'
+    correct: False
+    reason: 'Pyhton é considerada como uma linguagem declarativa.'
+ 
+  - C : 'HTML'
+    correct: False 
+    reason: 'HTML é considerada como linguagem de mark-up (de marcação).'
+ 
+  - D : 'Nenhuma das respostas anteriores.'
+    correct: True
+    reason: 'Uma linguagem consultiva seria SQL, por exemplo.'
+# ---
+#id: 1
+# texto: Como selecionar todas as colunas da tabela 'QUALQUER' em SQL?
+# answer:
+# ---

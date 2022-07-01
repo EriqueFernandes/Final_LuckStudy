@@ -1,0 +1,82 @@
+# Questões - Cálculo em uma variável real
+id: 1
+texto: Determine a derivada de \(y = x^2\), em relação a x.
+options:
+  - A : '\(2x\)'  
+    correct: True 
+    reason: 'Segue-se diretamente aplicando a fórmula da derivada de uma potência.'
+
+  - B : '\(2\)'
+    correct: False
+    reason: 'O x não desaparece quando é aplicada a fórmula da derivada da potência.'
+
+  - C : '\(x^3\)'
+    correct: False
+    reason: 'O expoente é decrescido em 1 quando se é aplicado a fórmula da derivada da potência.'
+ 
+  - D : '\(\dfrac{x}{2}\)'
+    correct: False
+    reason: 'A aplicação da fórmula da derivada de uma potência foi incorreta.'
+---
+id: 2
+texto: 'Qual a derivada da função \(f(x) = mx\) com \(m\) constante?'
+options:
+  - A : '\(m\)'
+    correct: True
+    reason: 'Segue-se da regra de derivação com uma constante.'
+
+  - B : '\(mx\)'
+    correct: False
+    reason: 'O x não faz parte nessa derivada.'
+ 
+  - C : '\(m^2 x\)'
+    correct: False 
+    reason: 'Não há motivo para o m estar elevado ao quadrado.'
+ 
+  - D : '\(0\)'
+    correct: False
+    reason: 'Não há somente uma constante em \(f(x)\)'
+---
+id: 3
+texto: 'Encontre os intervalos onde f é crescente e decrescente respectivamente, com \(f(x) = x^2 + 6x + 3\), no universo dos números reais.'
+options:
+  - A : '\( (-\infty, \infty); \emptyset \)'
+    correct: True
+    reason: 'A derivada é uma função de primeiro grau!'
+
+  - B : '\( \emptyset; (-\infty, \infty) \)'
+    correct: False
+    reason: 'A derivada é uma função de primeiro grau!'
+ 
+  - C : '\((6, \infty); (-\infty, 6)\)'
+    correct: False 
+    reason: 'Ponto crítico incorreto.'
+
+  - D : '\((-3, \infty);(-\infty, -3)\)'
+    correct: False
+    reason: 'De fato, -3 é o ponto crítico e a derivada muda de sinal nesse ponto.' 
+---
+id: 4
+texto: 'Encontre uma primitiva \(H(x)\) de  \(f(x) = 9x^2 + 6x + 3\).'
+options:
+  - A : '\(H(x) =  18x + 6\)'
+    correct: False
+    reason: 'Na verdade, não estamos derivando, e sim encontrando uma função cuja derivada seja f.'
+
+  - B : '\(H(x) = 18x^3 + 6x^2 + 3x\)'
+    correct: False
+    reason: 'Você pode verificar que se derivar essa resposta, não chegaremos na f. '
+ 
+  - C : '\(H(x) = 3x + 3\)'
+    correct: False 
+    reason: 'Se derivarmos H(x), não chegamos na f.'
+
+  - D : 'Nenhuma das respostas anteriores.'
+    correct: True
+    reason: 'De fato, \(H(x) = 3x^3 + 3x^2 + 3x + C\), em que \(C\) é uma constante qualquer.'
+# ---
+#id: 
+# texto: 'Calcule a integral indefinida de \(f(x) = sen (x)\)'
+# answer:
+# ---
+ 
