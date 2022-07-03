@@ -1,6 +1,7 @@
 #Fundamentos da Matemática - Questões
 id: 1
 texto: 'Qual das seguintes frases abaixo NÃO é uma proposição?'
+level: 1
 options:
   - A : '2 + 3 = 1'
     correct: False
@@ -20,6 +21,7 @@ options:
 ---
 id: 2
 texto: 'Qual o dígito das unidades de \( 2^{961} \)?'
+level: 1
 options:
   - A : '9'
     correct: False
@@ -39,6 +41,7 @@ options:
 ---
 id: 3
 texto: 'Sobre a equação \( \sqrt{x^2 +1} = x + 3, x \in \mathbb{R} \), podemos afirmar que:'
+level: 1
 options:
   - A : 'Há duas soluções para x.'
     correct: False
@@ -58,6 +61,7 @@ options:
 ---
 id: 4
 texto: '(OBMEP - Adaptada) Qual a negação de "Todos os meus chapéus são verdes"?'
+level: 1
 options:
   - A : 'Nenhum chapéu meu é verde'
     correct: False
@@ -74,3 +78,576 @@ options:
   - D : 'Não tenho chapéus'
     correct: False
     reason: 'Deve haver pelo menos um chapéu, para se afirmar sobre ele(s).'
+---
+id: 5
+texto: 'Miguel tinha em sua carteira várias notas de 2, 5, 10, 20 e 50 reais. Ele pagou 63 reais por um livro com seis dessas notas, sem ter troco a receber. Quantas notas de 2 reais ele usou?'
+level: 2
+options:
+  - A : 1
+    correct: False
+    reason: 'Sem usar a nota de 5 reais, Miguel não somaria o valor pago, pois as demais notas têm valores pares e, portanto,
+              ele não conseguiria uma soma ímpar. Assim, ele precisa escolher mais 5 notas cuja soma seja 63 - 5 = 58.
+              Portanto, ele precisa escolher algumas notas, dentre as de 2 e 5 reais, cuja soma seja 8 (para isso, ele não usa as
+              outras notas, pois elas têm valor maior do que 8). Nesse caso, a única escolha para somar 8 é escolher quatro
+              notas de 2 reais. Sendo assim, Miguel já separou cinco notas, uma de 5 reais e quatro de 2, somando
+              5 +4 * 2 = 5+ 8 = 13 reais. Como ele fez a compra com seis notas, para somar 63 reais, ele usou uma nota de
+              50, uma de 5 e quatro notas de 2 reais.'
+
+  - B : 2
+    correct: False
+    reason: Sem usar a nota de 5 reais, Miguel não somaria o valor pago, pois as demais notas têm valores pares e, portanto,
+              ele não conseguiria uma soma ímpar. Assim, ele precisa escolher mais 5 notas cuja soma seja 63 - 5 = 58.
+              Portanto, ele precisa escolher algumas notas, dentre as de 2 e 5 reais, cuja soma seja 8 (para isso, ele não usa as
+              outras notas, pois elas têm valor maior do que 8). Nesse caso, a única escolha para somar 8 é escolher quatro
+              notas de 2 reais. Sendo assim, Miguel já separou cinco notas, uma de 5 reais e quatro de 2, somando
+              5 +4 * 2 = 5+ 8 = 13 reais. Como ele fez a compra com seis notas, para somar 63 reais, ele usou uma nota de
+              50, uma de 5 e quatro notas de 2 reais.'
+ 
+  - C : 3
+    correct: False 
+    reason: Sem usar a nota de 5 reais, Miguel não somaria o valor pago, pois as demais notas têm valores pares e, portanto,
+              ele não conseguiria uma soma ímpar. Assim, ele precisa escolher mais 5 notas cuja soma seja 63 - 5 = 58.
+              Portanto, ele precisa escolher algumas notas, dentre as de 2 e 5 reais, cuja soma seja 8 (para isso, ele não usa as
+              outras notas, pois elas têm valor maior do que 8). Nesse caso, a única escolha para somar 8 é escolher quatro
+              notas de 2 reais. Sendo assim, Miguel já separou cinco notas, uma de 5 reais e quatro de 2, somando
+              5 +4 * 2 = 5+ 8 = 13 reais. Como ele fez a compra com seis notas, para somar 63 reais, ele usou uma nota de
+              50, uma de 5 e quatro notas de 2 reais.'
+
+  - D : 4
+    correct: True
+    reason: Sem usar a nota de 5 reais, Miguel não somaria o valor pago, pois as demais notas têm valores pares e, portanto,
+              ele não conseguiria uma soma ímpar. Assim, ele precisa escolher mais 5 notas cuja soma seja 63 - 5 = 58.
+              Portanto, ele precisa escolher algumas notas, dentre as de 2 e 5 reais, cuja soma seja 8 (para isso, ele não usa as
+              outras notas, pois elas têm valor maior do que 8). Nesse caso, a única escolha para somar 8 é escolher quatro
+              notas de 2 reais. Sendo assim, Miguel já separou cinco notas, uma de 5 reais e quatro de 2, somando
+              5 +4 * 2 = 5+ 8 = 13 reais. Como ele fez a compra com seis notas, para somar 63 reais, ele usou uma nota de
+              50, uma de 5 e quatro notas de 2 reais.'
+---
+id: 6
+texto: Os edifícios A e B da fi gura não possuem janelas em suas laterais e têm o mesmo número de janelas na parte de trás. O edifício A tem mais janelas na frente do que atrás; já o edifício B tem mais janelas atrás do que na frente. Qual é o número total de janelas nos dois edifícios?
+level: 2
+options:
+  - A : 21
+    correct: False
+    reason: Por observação direta da ilustração, vemos que o edifício A tem 12 janelas na frente. Logo, tem 11 ou menos
+            janelas atrás. O edifício B tem 10 janelas na frente. Logo, tem 11 ou mais janelas atrás. Como os dois prédios têm
+            o mesmo número de janelas na parte de trás, concluímos que esse número só pode ser 11. Como nas laterais não
+            há janelas, os dois edifícios juntos têm 12 + 11 + 10 + 11 = 44 janelas.
+
+  - B : 23
+    correct: False
+    reason: Por observação direta da ilustração, vemos que o edifício A tem 12 janelas na frente. Logo, tem 11 ou menos
+            janelas atrás. O edifício B tem 10 janelas na frente. Logo, tem 11 ou mais janelas atrás. Como os dois prédios têm
+            o mesmo número de janelas na parte de trás, concluímos que esse número só pode ser 11. Como nas laterais não
+            há janelas, os dois edifícios juntos têm 12 + 11 + 10 + 11 = 44 janelas.
+ 
+  - C : 44
+    correct: True
+    reason: Por observação direta da ilustração, vemos que o edifício A tem 12 janelas na frente. Logo, tem 11 ou menos
+            janelas atrás. O edifício B tem 10 janelas na frente. Logo, tem 11 ou mais janelas atrás. Como os dois prédios têm
+            o mesmo número de janelas na parte de trás, concluímos que esse número só pode ser 11. Como nas laterais não
+            há janelas, os dois edifícios juntos têm 12 + 11 + 10 + 11 = 44 janelas.
+
+  - D : 46
+    correct: False
+    reason: Por observação direta da ilustração, vemos que o edifício A tem 12 janelas na frente. Logo, tem 11 ou menos
+            janelas atrás. O edifício B tem 10 janelas na frente. Logo, tem 11 ou mais janelas atrás. Como os dois prédios têm
+            o mesmo número de janelas na parte de trás, concluímos que esse número só pode ser 11. Como nas laterais não
+            há janelas, os dois edifícios juntos têm 12 + 11 + 10 + 11 = 44 janelas.
+---
+id: 7
+texto: 3. Uma melancia média e duas melancias grandes custam o mesmo que oito melancias pequenas. Uma melancia média e uma pequena custam o mesmo que uma melancia grande. Quantas melancias pequenas podem ser compradas pelo mesmo preço de uma melancia grande?
+level: 2
+options:
+  - A : 3
+    correct: True
+    reason: 'Pelo enunciado, temos duas igualdades: M + 2G = 8P e M + P = G, em que P, M e G representam os preços das
+              melancias pequena, média e grande, respectivamente.
+              Da primeira relação temos que M = 8P – 2G. Substituindo na segunda relação, temos: G = 8P – 2G + P; logo,
+              G = 3P. Assim, pelo preço de uma melancia grande podemos comprar 3 pequenas.'
+
+  - B : 4
+    correct: False
+    reason: 'Pelo enunciado, temos duas igualdades: M + 2G = 8P e M + P = G, em que P, M e G representam os preços das
+              melancias pequena, média e grande, respectivamente.
+              Da primeira relação temos que M = 8P – 2G. Substituindo na segunda relação, temos: G = 8P – 2G + P; logo,
+              G = 3P. Assim, pelo preço de uma melancia grande podemos comprar 3 pequenas.'
+ 
+  - C : 5
+    correct: False 
+    reason: 'Pelo enunciado, temos duas igualdades: M + 2G = 8P e M + P = G, em que P, M e G representam os preços das
+              melancias pequena, média e grande, respectivamente.
+              Da primeira relação temos que M = 8P – 2G. Substituindo na segunda relação, temos: G = 8P – 2G + P; logo,
+              G = 3P. Assim, pelo preço de uma melancia grande podemos comprar 3 pequenas.'
+
+  - D : 6
+    correct: False
+    reason: 'Pelo enunciado, temos duas igualdades: M + 2G = 8P e M + P = G, em que P, M e G representam os preços das
+              melancias pequena, média e grande, respectivamente.
+              Da primeira relação temos que M = 8P – 2G. Substituindo na segunda relação, temos: G = 8P – 2G + P; logo,
+              G = 3P. Assim, pelo preço de uma melancia grande podemos comprar 3 pequenas.'
+---
+id: 8
+texto: De quantas maneiras podemos trocar uma nota de R$ 20,00 por moedas de R$ 0,10 e R$ 0,25?
+level: 3
+options:
+  - A : 21
+    correct: False
+    reason: Não podemos usar um número ímpar de moedas de 25 centavos, mas podemos usar 0, 2, 4, ...
+            até 80 dessas moedas, e cada escolha gera uma maneira diferente de fazer a troca. Logo, o número de maneiras
+            de trocar R$ 20,00 por moedas de R$ 0,10 e R$ 0,25 é igual à quantidade de números pares entre 0 e 80,
+            incluindo os extremos, ou seja, é 41.
+
+  - B : 36
+    correct: False
+    reason: Não podemos usar um número ímpar de moedas de 25 centavos, mas podemos usar 0, 2, 4, ...
+            até 80 dessas moedas, e cada escolha gera uma maneira diferente de fazer a troca. Logo, o número de maneiras
+            de trocar R$ 20,00 por moedas de R$ 0,10 e R$ 0,25 é igual à quantidade de números pares entre 0 e 80,
+            incluindo os extremos, ou seja, é 41.
+ 
+  - C : 38
+    correct: False 
+    reason: Não podemos usar um número ímpar de moedas de 25 centavos, mas podemos usar 0, 2, 4, ...
+            até 80 dessas moedas, e cada escolha gera uma maneira diferente de fazer a troca. Logo, o número de maneiras
+            de trocar R$ 20,00 por moedas de R$ 0,10 e R$ 0,25 é igual à quantidade de números pares entre 0 e 80,
+            incluindo os extremos, ou seja, é 41.
+
+  - D : 41
+    correct: True
+    reason: Não podemos usar um número ímpar de moedas de 25 centavos, mas podemos usar 0, 2, 4, ...
+            até 80 dessas moedas, e cada escolha gera uma maneira diferente de fazer a troca. Logo, o número de maneiras
+            de trocar R$ 20,00 por moedas de R$ 0,10 e R$ 0,25 é igual à quantidade de números pares entre 0 e 80,
+            incluindo os extremos, ou seja, é 41.
+---
+id: 9
+texto: Observe que na igualdade 360 = 90 + 120 + 150 as parcelas são proporcionais a 3, 4 e 5. De quantas maneiras podemos escrever 360 como a soma de três parcelas inteiras, em ordem crescente, e proporcionais a três números inteiros positivos consecutivos?
+level: 3
+options:
+  - A : 12
+    correct: False
+    reason: 'Escrever o número 360 como soma de três parcelas inteiras proporcionais a três inteiros positivos consecutivos
+              significa escrever a equação  360 = k ∙ (n -1) +k ∙ n + k ∙ (n + 1)
+              em que (n - 1), n e (n + 1) são os três inteiros positivos consecutivos e k é a constante de proporcionalidade.
+              Observe que k deve ser um número inteiro não nulo para garantir que as três parcelas k ∙ (n - 1), k ∙ n e k ∙
+              (n + 1) sejam inteiras e não nulas. Dividindo ambos os lados da igualdade acima por k, obtemos
+              360/k = (n - 1)+ n + (n + 1) = 3 ∙ n ⟹ n =120/k
+              Logo, por ser um número inteiro não nulo, a constante de proporcionalidade k deve ser um divisor positivo de 120,
+              mas não pode ser o próprio 120. Se k fosse 120, então n seria 1 e teríamos:
+              360 = 120 ∙ (1 -1) +120 ∙ 1 + 120 ∙ (1 + 1) = 0 + 120 +240.
+              Nessa decomposição de 360 os fatores não são todos positivos, o que é vetado pelo enunciado. Logo,
+              k ∈ {1,2,3,4,5,6,8,10,12,15,20,24,30,40,60}
+              Portanto, é possível escrever o número 360 de 15 maneiras diferentes como a soma de três parcelas inteiras, em
+              ordem crescente, e proporcionais a três inteiros positivos consecutivos.'
+
+  - B : 15
+    correct: True
+    reason: 'Escrever o número 360 como soma de três parcelas inteiras proporcionais a três inteiros positivos consecutivos
+              significa escrever a equação  360 = k ∙ (n -1) +k ∙ n + k ∙ (n + 1)
+              em que (n - 1), n e (n + 1) são os três inteiros positivos consecutivos e k é a constante de proporcionalidade.
+              Observe que k deve ser um número inteiro não nulo para garantir que as três parcelas k ∙ (n - 1), k ∙ n e k ∙
+              (n + 1) sejam inteiras e não nulas. Dividindo ambos os lados da igualdade acima por k, obtemos
+              360/k = (n - 1)+ n + (n + 1) = 3 ∙ n ⟹ n =120/k
+              Logo, por ser um número inteiro não nulo, a constante de proporcionalidade k deve ser um divisor positivo de 120,
+              mas não pode ser o próprio 120. Se k fosse 120, então n seria 1 e teríamos:
+              360 = 120 ∙ (1 -1) +120 ∙ 1 + 120 ∙ (1 + 1) = 0 + 120 +240.
+              Nessa decomposição de 360 os fatores não são todos positivos, o que é vetado pelo enunciado. Logo,
+              k ∈ {1,2,3,4,5,6,8,10,12,15,20,24,30,40,60}
+              Portanto, é possível escrever o número 360 de 15 maneiras diferentes como a soma de três parcelas inteiras, em
+              ordem crescente, e proporcionais a três inteiros positivos consecutivos.'
+ 
+  - C : 20
+    correct: False 
+    reason: 'Escrever o número 360 como soma de três parcelas inteiras proporcionais a três inteiros positivos consecutivos
+              significa escrever a equação  360 = k ∙ (n -1) +k ∙ n + k ∙ (n + 1)
+              em que (n - 1), n e (n + 1) são os três inteiros positivos consecutivos e k é a constante de proporcionalidade.
+              Observe que k deve ser um número inteiro não nulo para garantir que as três parcelas k ∙ (n - 1), k ∙ n e k ∙
+              (n + 1) sejam inteiras e não nulas. Dividindo ambos os lados da igualdade acima por k, obtemos
+              360/k = (n - 1)+ n + (n + 1) = 3 ∙ n ⟹ n =120/k
+              Logo, por ser um número inteiro não nulo, a constante de proporcionalidade k deve ser um divisor positivo de 120,
+              mas não pode ser o próprio 120. Se k fosse 120, então n seria 1 e teríamos:
+              360 = 120 ∙ (1 -1) +120 ∙ 1 + 120 ∙ (1 + 1) = 0 + 120 +240.
+              Nessa decomposição de 360 os fatores não são todos positivos, o que é vetado pelo enunciado. Logo,
+              k ∈ {1,2,3,4,5,6,8,10,12,15,20,24,30,40,60}
+              Portanto, é possível escrever o número 360 de 15 maneiras diferentes como a soma de três parcelas inteiras, em
+              ordem crescente, e proporcionais a três inteiros positivos consecutivos.'
+
+  - D : 60
+    correct: False
+    reason: 'Escrever o número 360 como soma de três parcelas inteiras proporcionais a três inteiros positivos consecutivos
+              significa escrever a equação  360 = k ∙ (n -1) +k ∙ n + k ∙ (n + 1)
+              em que (n - 1), n e (n + 1) são os três inteiros positivos consecutivos e k é a constante de proporcionalidade.
+              Observe que k deve ser um número inteiro não nulo para garantir que as três parcelas k ∙ (n - 1), k ∙ n e k ∙
+              (n + 1) sejam inteiras e não nulas. Dividindo ambos os lados da igualdade acima por k, obtemos
+              360/k = (n - 1)+ n + (n + 1) = 3 ∙ n ⟹ n =120/k
+              Logo, por ser um número inteiro não nulo, a constante de proporcionalidade k deve ser um divisor positivo de 120,
+              mas não pode ser o próprio 120. Se k fosse 120, então n seria 1 e teríamos:
+              360 = 120 ∙ (1 -1) +120 ∙ 1 + 120 ∙ (1 + 1) = 0 + 120 +240.
+              Nessa decomposição de 360 os fatores não são todos positivos, o que é vetado pelo enunciado. Logo,
+              k ∈ {1,2,3,4,5,6,8,10,12,15,20,24,30,40,60}
+              Portanto, é possível escrever o número 360 de 15 maneiras diferentes como a soma de três parcelas inteiras, em
+              ordem crescente, e proporcionais a três inteiros positivos consecutivos.'
+---
+id: 10
+texto: Qual é o maior valor possível para o máximo divisor comum de dois números naturais cujo produto é 6 000?
+level: 3
+options:
+  - A : 
+    correct: False
+    reason: O MDC de dois números que estão fatorados como produto de primos é o produto dos primos comuns, cada um
+            elevado ao menor expoente que comparece nas fatorações.
+            Denotamos por α e β os dois números cujo produto é 6000 = 2^4 × 3 × 5^3
+            . Assim, os fatores primos de α e β são 2,3 ou 5.
+            O MDC de α e β será o maior possível, quando os fatores primos estiverem distribuídos de forma mais equânime
+            possível. Em particular, o fator primo 2, que ocorre com expoente par na fatoração de 6000, deve ocorrer com o
+            mesmo expoente nas fatorações de α e β, a saber, a metade do expoente (4 ÷ 2 = 2) que aparece na fatoração de
+            6000. Para o primo 5, cujo expoente é um número ímpar maior do que 2, devemos maximizar sua ocorrência nas
+            fatorações de α e β. Para isso, subtraímos 1 de seu expoente na fatoração de 6000, ou seja, fazemos 3 – 1 = 2, e
+            depois tomamos a metade (2 ÷ 2 = 1). Assim, para o caso estabelecido no enunciado, a fim de maximizar o MDC
+            entre α e β, devemos ter em suas fatorações o produto 2 × 2 × 5 = 20. Uma possibilidade é α = 2 × 2 × 5 × 3 =
+            60 e β = 2 × 2 × 5 × 5 = 100. Assim, o maior valor possível para o MDC entre α e β é 20.
+
+  - B :
+    correct: True
+    reason: O MDC de dois números que estão fatorados como produto de primos é o produto dos primos comuns, cada um
+            elevado ao menor expoente que comparece nas fatorações.
+            Denotamos por α e β os dois números cujo produto é 6000 = 2^4 × 3 × 5^3
+            . Assim, os fatores primos de α e β são 2,3 ou 5.
+            O MDC de α e β será o maior possível, quando os fatores primos estiverem distribuídos de forma mais equânime
+            possível. Em particular, o fator primo 2, que ocorre com expoente par na fatoração de 6000, deve ocorrer com o
+            mesmo expoente nas fatorações de α e β, a saber, a metade do expoente (4 ÷ 2 = 2) que aparece na fatoração de
+            6000. Para o primo 5, cujo expoente é um número ímpar maior do que 2, devemos maximizar sua ocorrência nas
+            fatorações de α e β. Para isso, subtraímos 1 de seu expoente na fatoração de 6000, ou seja, fazemos 3 – 1 = 2, e
+            depois tomamos a metade (2 ÷ 2 = 1). Assim, para o caso estabelecido no enunciado, a fim de maximizar o MDC
+            entre α e β, devemos ter em suas fatorações o produto 2 × 2 × 5 = 20. Uma possibilidade é α = 2 × 2 × 5 × 3 =
+            60 e β = 2 × 2 × 5 × 5 = 100. Assim, o maior valor possível para o MDC entre α e β é 20.
+
+  - C : 
+    correct: False
+    reason: O MDC de dois números que estão fatorados como produto de primos é o produto dos primos comuns, cada um
+            elevado ao menor expoente que comparece nas fatorações.
+            Denotamos por α e β os dois números cujo produto é 6000 = 2^4 × 3 × 5^3
+            . Assim, os fatores primos de α e β são 2,3 ou 5.
+            O MDC de α e β será o maior possível, quando os fatores primos estiverem distribuídos de forma mais equânime
+            possível. Em particular, o fator primo 2, que ocorre com expoente par na fatoração de 6000, deve ocorrer com o
+            mesmo expoente nas fatorações de α e β, a saber, a metade do expoente (4 ÷ 2 = 2) que aparece na fatoração de
+            6000. Para o primo 5, cujo expoente é um número ímpar maior do que 2, devemos maximizar sua ocorrência nas
+            fatorações de α e β. Para isso, subtraímos 1 de seu expoente na fatoração de 6000, ou seja, fazemos 3 – 1 = 2, e
+            depois tomamos a metade (2 ÷ 2 = 1). Assim, para o caso estabelecido no enunciado, a fim de maximizar o MDC
+            entre α e β, devemos ter em suas fatorações o produto 2 × 2 × 5 = 20. Uma possibilidade é α = 2 × 2 × 5 × 3 =
+            60 e β = 2 × 2 × 5 × 5 = 100. Assim, o maior valor possível para o MDC entre α e β é 20.
+
+
+  - D :
+    correct: False
+    reason: O MDC de dois números que estão fatorados como produto de primos é o produto dos primos comuns, cada um
+            elevado ao menor expoente que comparece nas fatorações.
+            Denotamos por α e β os dois números cujo produto é 6000 = 2^4 × 3 × 5^3
+            . Assim, os fatores primos de α e β são 2,3 ou 5.
+            O MDC de α e β será o maior possível, quando os fatores primos estiverem distribuídos de forma mais equânime
+            possível. Em particular, o fator primo 2, que ocorre com expoente par na fatoração de 6000, deve ocorrer com o
+            mesmo expoente nas fatorações de α e β, a saber, a metade do expoente (4 ÷ 2 = 2) que aparece na fatoração de
+            6000. Para o primo 5, cujo expoente é um número ímpar maior do que 2, devemos maximizar sua ocorrência nas
+            fatorações de α e β. Para isso, subtraímos 1 de seu expoente na fatoração de 6000, ou seja, fazemos 3 – 1 = 2, e
+            depois tomamos a metade (2 ÷ 2 = 1). Assim, para o caso estabelecido no enunciado, a fim de maximizar o MDC
+            entre α e β, devemos ter em suas fatorações o produto 2 × 2 × 5 = 20. Uma possibilidade é α = 2 × 2 × 5 × 3 =
+            60 e β = 2 × 2 × 5 × 5 = 100. Assim, o maior valor possível para o MDC entre α e β é 20.
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
