@@ -1,6 +1,7 @@
 # Questões - Cálculo em uma variável real
 id: 1
 texto: Determine a derivada de \(y = x^2\), em relação a x.
+level: 1
 options:
   - A : '\(2x\)'  
     correct: True 
@@ -20,6 +21,7 @@ options:
 ---
 id: 2
 texto: 'Qual a derivada da função \(f(x) = mx\) com \(m\) constante?'
+level: 1
 options:
   - A : '\(m\)'
     correct: True
@@ -39,6 +41,7 @@ options:
 ---
 id: 3
 texto: 'Encontre os intervalos onde f é crescente e decrescente respectivamente, com \(f(x) = x^2 + 6x + 3\), no universo dos números reais.'
+level: 1
 options:
   - A : '\( (-\infty, \infty); \emptyset \)'
     correct: True
@@ -58,6 +61,7 @@ options:
 ---
 id: 4
 texto: 'Encontre uma primitiva \(H(x)\) de  \(f(x) = 9x^2 + 6x + 3\).'
+level: 1 
 options:
   - A : '\(H(x) =  18x + 6\)'
     correct: False
@@ -74,9 +78,25 @@ options:
   - D : 'Nenhuma das respostas anteriores.'
     correct: True
     reason: 'De fato, \(H(x) = 3x^3 + 3x^2 + 3x + C\), em que \(C\) é uma constante qualquer.'
-# ---
-#id: 
-# texto: 'Calcule a integral indefinida de \(f(x) = sen (x)\)'
-# answer:
-# ---
+---
+id: 
+texto:
+level:
+options:
+  - A : 
+    correct: False
+    reason: 
+
+  - B :
+    correct: False
+    reason: 
+ 
+  - C : 
+    correct: False 
+    reason: 
+
+  - D :
+    correct: True
+    reason:
+
  
