@@ -30,7 +30,7 @@ options:
     reason: 'Nenhuma das condições é satisfeita'
   
   - C : 'a = 3, b = 5'
-    correct: True 
+    correct: False 
     reason: 'Uma das condições de || é satisfeita, portanto será executado.'
  
   - D : 'Nenhuma das respostas anteriores.'

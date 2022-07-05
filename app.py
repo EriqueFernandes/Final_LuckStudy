@@ -20,12 +20,12 @@ def abrirArquivo(nomeArquivo):
     return questoes
 
 
-def buscaQuestao(materia, idPessoa):
+def buscaQuestao(materia, idPessoa, nivelpassado = None):
     dados = None
     questoesProibidas = None
     id_prefix = None
 
-    for jogador in data["jogadores"]:
+    for jogador in data["users"]:
         if jogador["id"] == idPessoa:
             questoesProibidas = jogador["questoesRespondidas"]
             break
@@ -51,14 +51,14 @@ def buscaQuestao(materia, idPessoa):
     for questao in dados:
         questao["id"] = str( questao["id"]) + id_prefix
 
-        if len(questoesProibidas) != 0:
-            if questao["id"] in questoesProibidas:
+        if nivelpassado != None:
+            if questao["nivel"] != nivelpassado:
                 continue
 
-            questoes.append(questao)
+        if len(questoesProibidas) != 0 and questao["id"] in questoesProibidas:
+            continue
 
-        else:
-            questoes.append(questao)
+        questoes.append(questao)
 
     if len(questoes) == 0:
         return None
@@ -68,12 +68,12 @@ def buscaQuestao(materia, idPessoa):
     return questaoEscolhida
 
 def addQuestion(nome, id_question):
-    for jogador in data["jogadores"]:
+    for jogador in data["users"]:
         if jogador["nome"] == nome:
             jogador["questoesRespondidas"].append(id_question)
 
 def verificaNome(nome):
-    for jogador in data["jogadores"]:
+    for jogador in data["users"]:
         
         if jogador["nome"] == nome:
             return False
@@ -82,7 +82,7 @@ def verificaNome(nome):
 
 def carregaIdJogadores():
     ids = []
-    for jogador in data["jogadores"]:
+    for jogador in data["users"]:
         ids.append(jogador["id"])
     
     return ids
@@ -94,7 +94,7 @@ def gerarIdAleatorio():
     return idGerado
 
 def pegaId(nome):
-    for jogador in data["jogadores"]:
+    for jogador in data["users"]:
         if jogador["nome"] == nome:
             return jogador["id"]
 
@@ -104,7 +104,7 @@ def addPessoa(nomePassado):
         "id": gerarIdAleatorio(),
         "questoesRespondidas": []
     }
-    data["jogadores"].append(pessoa)
+    data["users"].append(pessoa)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -113,24 +113,17 @@ def login():
         if verificaNome(nomeUser):
             addPessoa(nomeUser)
             return redirect(url_for("choose", nomeusuario = nomeUser))
-        return render_template("login.html", invalido="Nome indisponível!", jogadores = data["jogadores"])
+        return render_template("login.html", invalido="Nome indisponível!", jogadores = data["users"])
     else:
-        return render_template("login.html", jogadores = data["jogadores"])
+        return render_template("login.html", jogadores = data["users"])
 
 @app.route("/choose/<nomeusuario>")
 def choose(nomeusuario):
     return render_template("choose.html")
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
 @app.route("/teste/<nomeusuario>/<materia>", methods = ['POST', 'GET'])
 def teste(nomeusuario, materia):
     questao = buscaQuestao(materia, pegaId(nomeusuario))
-
-    if questao == None:
-        return redirect(url_for("choose", nomeusuario = nomeusuario))
 
     if request.method == "POST":
         acertou = request.form['info_data']
@@ -138,11 +131,39 @@ def teste(nomeusuario, materia):
 
         addQuestion(nomeusuario, id_question)
 
-    return render_template("teste.html", data = questao)
+        questao = buscaQuestao(materia, pegaId(nomeusuario))
 
-@app.route("/calendario")
+        if questao == None:
+            return "acabou"
+        else: 
+            return questao
+
+    else:
+        if questao == None:
+            return redirect(url_for("choose", nomeusuario = nomeusuario))
+        return render_template("teste.html", data = questao)
+
+@app.route("/calendario", methods = ['POST','GET'])
 def calendario():
+    if request.method == "POST":
+        number_day = request.form['info_dia']
+        number_ano = request.form['info_ano']
+        number_mes = str(int(request.form['info_mes']) + 1)
+
+        def verificarData(dt):
+            dadosCalendario = abrirArquivo("yaml/calendario.yaml")
+            for row in dadosCalendario:
+                if row["data"] == dt:
+                    return row["evento"]
+            return "Sem evento"
+
+        return verificarData(number_day+"/"+ number_mes +"/"+number_ano)
+
     return render_template("calendario.html")
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug = True)

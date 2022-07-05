@@ -7,122 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/calendario.css">
-    <title>Document</title>
+    <title>Lucky Study | Calendario</title>
 </head>
 
 <body>
-    <div class="title">
-        <h1 id="show_year"></h1>
-        <h2 id="show_month"></h2>
+
+    <div class="fundo_preto"></div>
+    <button id="homepage">SAIR</button>
+
+    <div class="all_components">
+        <div class="title">
+            <h1 id="show_year"></h1>
+            <h2 id="show_month"></h2>
+        </div>
+        <div class="container">
+            <button id="past_btn">></button>
+            <div class="container_calendario"></div>
+            <button id="future_btn">></button>
+            <div class="day_exibition">
+                <div class="day_exibition_header">
+                    <h3 id="title_day"></h3>
+                </div>
+                <div class="day_exibition_container">
+                    <p id="text_of_day"></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <button id="past_btn">></button>
-        <div class="container_calendario"></div>
-        <button id="future_btn">></button>
-    </div>
-    <script>
-        const containerCalendario = document.querySelector(".container_calendario");
-
-        const nDias = (mes) => {
-            if (mes % 2 == 1) {
-                if (mes == 1) {
-                    return 28;
-                }
-                else {
-                    return 30;
-                }
-            }
-            else {
-                return 31;
-            }
-        }
-
-        const criaDias = (pai) => {
-            const dia = document.createElement("div")
-            dia.classList.add("day")
-            pai.appendChild(dia)
-        }
-
-        const descobreDiaDaSemana = (numero) => {
-            switch (numero) {
-                case 0:
-                    return "Dom"
-                case 1:
-                    return "Seg"
-                case 2:
-                    return "Ter"
-                case 3:
-                    return "Qua"
-                case 4:
-                    return "Qui"
-                case 5:
-                    return "Sex"
-                case 6:
-                    return "Sab"
-                default:
-                    break;
-
-            }
-        }
-
-        const descobreDiaPrimeiro = (diaDoMes, diaDaSemana) => {
-            while (diaDoMes >= 1) {
-                diaDaSemana -= 1
-                diaDoMes -= 1;
-            }
-
-            return diaDaSemana % 7 + 7
-        }
-
-        for (let i = 0; i < 42; i++) {
-            criaDias(containerCalendario)
-        }
-
-        for (let i = 0; i < 7; i++) {
-            document.querySelectorAll(".day")[i].innerHTML = descobreDiaDaSemana(i)
-        }
-
-        const desenhandoDias = (firstDay) => {
-            let count = 7;
-            let countDay = 1;
-
-            while (count < 42 && countDay <= dias) {
-                if (countDay == 1) {
-                    if (count % 7 == firstDay) {
-                        document.querySelectorAll(".day")[count].innerHTML = countDay;
-                        countDay++;
-                    }
-                    else {
-                        count++
-                        continue;
-                    }
-                }
-                else {
-                    document.querySelectorAll(".day")[count].innerHTML = countDay;
-                    countDay++;
-                }
-                count++
-            }
-        }
-
-        const mes = new Date().getMonth();
-        const ano = new Date().getFullYear();
-        const dias = nDias(mes);
-
-        const primeiroDia = descobreDiaPrimeiro(new Date().getDate(), new Date().getDay())
-
-        document.querySelector("#show_year").textContent = ano;
-
-        const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "junho",
-            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-        ];
-
-        const d = new Date();
-
-        document.querySelector("#show_month").textContent = monthNames[d.getMonth()]
-
-        desenhandoDias(primeiroDia + 1)
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="static/js/calendario.js"></script>
 </body>
 
 </html>

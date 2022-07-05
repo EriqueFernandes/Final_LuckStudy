@@ -39,50 +39,93 @@
             <button id="confirmar">Enviar</button>
             <button id="next" type="submit">Próxima</button>
         </div>
-
     </form>
     <p id="motivo"></p>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-        const dados = {{ data | tojson }}
+        let dados = {{ data | tojson }}
+
         let controle = false;
         let acertou = null
         let respostaCorreta = null;
 
         const buttonVerificar = document.querySelector("#confirmar");
         const buttonNext = document.querySelector("#next");
-
         const btn_home = document.querySelector("#home");
 
-        btn_home.onclick = () => {
-            window.location.href = "/"
+        const verificaRespostaCorreta = () => {
+            for (let i = 0; i < dados["options"].length; i++) {
+                if (dados["options"][i]["correct"]) {
+                    respostaCorreta = i
+                }
+            }
         }
 
-        for (let i = 0; i < dados["options"].length; i++) {
-            if (dados["options"][i]["correct"]) {
-                respostaCorreta = i
+        const limparBackground = () => {
+            document.querySelector("#motivo").textContent = " "
+            for(const inputRadio of document.querySelectorAll("input")){
+                if(inputRadio.checked){
+                    inputRadio.checked = false;
+                }
             }
+
+            for(const titulo of document.querySelectorAll("label")){
+                for(const classe of titulo.classList){
+                    if(classe == "acertou"){
+                        titulo.classList.remove("acertou")
+                    }
+                    else if(classe == "errou"){
+                        titulo.classList.remove("errou")
+                    }
+                    else continue;
+                }
+            }
+        }
+
+        const desenharNovaQuestao = (questao) => {
+            const textos = questao["options"]
+            const allLabel = document.querySelectorAll("label")
+
+
+            allLabel[0].textContent = textos[0]["A"]
+            allLabel[1].textContent = textos[1]["B"]
+            allLabel[2].textContent = textos[2]["C"]
+            allLabel[3].textContent = textos[3]["D"]
+
+            document.querySelector("h2").textContent = questao["texto"]
+            document.querySelector("h1").textContent =  `Questão ${questao["id"]}`
+            console.log(dados)
+            dados = questao
+            console.log(dados)
+            acertou = null
+            controle = false;
+
+            verificaRespostaCorreta()
+        }
+
+        btn_home.onclick = () => {
+            window.location.href = `/choose/${window.location.href.split("/")[4]}`
         }
 
         buttonVerificar.onclick = (event) => {
             event.preventDefault()
+
             const alternativas = document.querySelectorAll(".alternativas");
+            
+            if (controle) return;
+
             for (let i = 0; i < alternativas.length; i++) {
                 if (alternativas[i].checked) {
-                    if (controle) return;
 
                     if (i != respostaCorreta) {
-                        document.querySelectorAll("label")[i].style = "background-color: #f00;"
+                        document.querySelectorAll("label")[i].classList.add("errou")
                         acertou = false;
                     }
                     else {
                         acertou = true;
                     }
 
-
-
-                    document.querySelectorAll("label")[respostaCorreta].style = "background-color: #0f0;"
-
+                    document.querySelectorAll("label")[respostaCorreta].classList.add("acertou")
                     document.querySelector("#motivo").textContent = dados["options"][i]["reason"]
 
                     controle = true
@@ -97,11 +140,20 @@
             $.post("", {
                 info_data: acertou,
                 id_question: dados["id"]
+                //nivel_question: dados["nivel"]
             })
-                .done(() => {
-                    document.querySelector("form").submit()
+                .then((response) => {
+                    if( response == "acabou"){
+                        window.location.href = `/choose/${window.location.href.split("/")[4]}`
+                    }
+                    else{
+                        limparBackground()
+                        desenharNovaQuestao(response)
+                    }
                 })
         }
+
+        verificaRespostaCorreta()
     </script>
 </body>
 

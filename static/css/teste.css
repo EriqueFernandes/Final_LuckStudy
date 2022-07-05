@@ -41,6 +41,14 @@ button {
     margin: 1%;
 }
 
+.acertou{
+    background-color: #2ed573;
+}
+
+.errou{
+    background-color: #ff4757;
+}
+
 #home{
     align-self: flex-start;
     margin-left: 10%;
