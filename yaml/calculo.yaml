@@ -79,24 +79,3 @@ options:
     correct: True
     reason: 'De fato, \(H(x) = 3x^3 + 3x^2 + 3x + C\), em que \(C\) é uma constante qualquer.'
 ---
-id: 
-texto:
-level:
-options:
-  - A : 
-    correct: False
-    reason: 
-
-  - B :
-    correct: False
-    reason: 
- 
-  - C : 
-    correct: False 
-    reason: 
-
-  - D :
-    correct: True
-    reason:
-
- 
