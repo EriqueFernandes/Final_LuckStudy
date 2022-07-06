@@ -1,5 +1,6 @@
 # Introdução à Modelagem Matemática - Questões
 id: 1
+nivel: 1
 texto: 'A respectiva média aritmética dos números 9, 8, 8, 9, 2, 7, 5 ,2, 3, 4 é:' 
 options:
   - A : '9'
@@ -19,6 +20,7 @@ options:
     reason: 'A média é dada pela soma dos números (57) dividida pela quantidade (10), o que resulta em 5,7.'
 ---
 id: 2
+nivel: 2
 texto: 'Dado uma sequência finita de números reais \( x_{1},x_{2},x_{3}, ..., x_{n} \), e média m, a soma dos erros médios ao quadrado é dada por:' 
 options:
   - A : ' \( \sum_{i = 1}^{n} (x_{i} - m)^2 \) '
@@ -38,6 +40,7 @@ options:
     reason: 'Olhe com mais calma! Veja o que significaria cada somatório.'
 ---
 id: 3
+nivel: 2
 texto: 'Escolha em qual das situações abaixo não seria bem representada em modelagem a partir de uma distribuição normal de dados:' 
 options:
   - A : 'Altura da população brasileira.'
@@ -57,6 +60,7 @@ options:
     reason: 'De fato, os resultados tendem sempre a serem mais próximos da média.'
 ---
 id: 4
+nivel: 1
 texto: 'Em um jogo Nim, são dispostos 100 palitos e os jogadores A e B devem retirar pelo menos um palito, jogando alternadamente.A quantidade máxima de palitos que podem ser retirados é 6. Diante disso, se A começar, determine quem vence e qual a primeira jogada.' 
 options:
   - A : 'A, retirando 2 palitos'

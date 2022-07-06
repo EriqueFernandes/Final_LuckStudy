@@ -1,35 +1,35 @@
 body {
     display: flex;
-    background-color: aqua;
+    background: linear-gradient(#222, #000);
     align-items: center;
     flex-direction: column;
     height: 100vh;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 3% 0;
     align-self: flex-start;
     margin-left: 10%;
+    color: #FDA7DF;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 2%;
 }
 
 label {
     font-size: 1.2rem;
-    margin: 2%;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 80%;
-    height: 30%;
-    background-color: rgb(84, 144, 197);
-    padding: 5%;
+    height: 50%;
+    background-color: #ffb8b8;
 }
 
 p{
@@ -37,8 +37,22 @@ p{
 }
 
 button {
-    width: 10%;
-    margin: 1%;
+    margin: 3% 0 10% 3%;
+    border: none;
+    background-color: #3d3d3d;
+    color: #FDA7DF;
+    width: 30%;
+    height: 30%;
+}
+
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 5px #7158e2;
+}
+
+input{
+    margin: 1% 5%;
 }
 
 .acertou{

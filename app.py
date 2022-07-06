@@ -19,15 +19,24 @@ def abrirArquivo(nomeArquivo):
 
     return questoes
 
+def makeRelatorio(id_da_pessoa):
+    for pessoa in data["users"]:
+        if pessoa["id"] != id_da_pessoa:
+            continue
+        if len(pessoa["questoesRespondidas"]) == 0:
+            return None
+        relatorio = [i for i in pessoa["questoesRespondidas"]]
+        return relatorio
 
 def buscaQuestao(materia, idPessoa, nivelpassado = None):
     dados = None
     questoesProibidas = None
     id_prefix = None
+    questoes = [] 
 
-    for jogador in data["users"]:
-        if jogador["id"] == idPessoa:
-            questoesProibidas = jogador["questoesRespondidas"]
+    for pessoa in data["users"]:
+        if pessoa["id"] == idPessoa:
+            questoesProibidas = [x["id_questao"] for x in pessoa["questoesRespondidas"]]
             break
 
     if materia == "ga":
@@ -44,16 +53,13 @@ def buscaQuestao(materia, idPessoa, nivelpassado = None):
         id_prefix = "3"
     else:
         dados = abrirArquivo("yaml/calculo.yaml")
-        id_prefix = "4"
-
-    questoes = []   
+        id_prefix = "4"  
 
     for questao in dados:
-        questao["id"] = str( questao["id"]) + id_prefix
+        questao["id"] = str(questao["id"]) + id_prefix
 
-        if nivelpassado != None:
-            if questao["nivel"] != nivelpassado:
-                continue
+        if nivelpassado != None and questao["nivel"] != nivelpassado:
+            continue
 
         if len(questoesProibidas) != 0 and questao["id"] in questoesProibidas:
             continue
@@ -67,42 +73,65 @@ def buscaQuestao(materia, idPessoa, nivelpassado = None):
 
     return questaoEscolhida
 
-def addQuestion(nome, id_question):
-    for jogador in data["users"]:
-        if jogador["nome"] == nome:
-            jogador["questoesRespondidas"].append(id_question)
+def descobrirProximoNive(nivelAnterior, acertouAnterior):
+    if nivelAnterior == 1:
+        if acertouAnterior == True:
+            return 2
+        else:
+            return 1 
+    elif nivelAnterior == 2:
+        if acertouAnterior == True:
+            return 3
+        else:
+            return 1 
+    else:
+        if acertouAnterior == True:
+            return 3
+        else:
+            return 2 
+
+def addQuestion(nome, id_question, acertouPassado,nivelQuestao):
+    for pessoa in data["users"]:
+        if pessoa["nome"] == nome:
+            objetoTeste = {
+                "id_questao" : id_question,
+                "acertou" : acertouPassado,
+                "nivel" : nivelQuestao
+            }
+            pessoa["questoesRespondidas"].append(objetoTeste)
 
 def verificaNome(nome):
-    for jogador in data["users"]:
+    for pessoa in data["users"]:
         
-        if jogador["nome"] == nome:
+        if pessoa["nome"] == nome:
             return False
 
     return True
 
-def carregaIdJogadores():
+def carregaIdUsuarios():
     ids = []
-    for jogador in data["users"]:
-        ids.append(jogador["id"])
+    for pessoa in data["users"]:
+        ids.append(pessoa["id"])
     
     return ids
 
 def gerarIdAleatorio():
     idGerado = random.randint(10000,100000)
-    if idGerado in carregaIdJogadores():
+    if idGerado in carregaIdUsuarios():
         idGerado = gerarIdAleatorio()
     return idGerado
 
 def pegaId(nome):
-    for jogador in data["users"]:
-        if jogador["nome"] == nome:
-            return jogador["id"]
+    for pessoa in data["users"]:
+        if pessoa["nome"] == nome:
+            return pessoa["id"]
 
 def addPessoa(nomePassado):
     pessoa = {
         "nome":nomePassado,
         "id": gerarIdAleatorio(),
-        "questoesRespondidas": []
+        "questoesRespondidas": [],
+        "relatorio": []
     }
     data["users"].append(pessoa)
 
@@ -113,13 +142,15 @@ def login():
         if verificaNome(nomeUser):
             addPessoa(nomeUser)
             return redirect(url_for("choose", nomeusuario = nomeUser))
-        return render_template("login.html", invalido="Nome indisponível!", jogadores = data["users"])
+        return render_template("login.html", invalido="Nome indisponível!", pessoas = data["users"])
     else:
-        return render_template("login.html", jogadores = data["users"])
+        return render_template("login.html", pessoas = data["users"])
 
 @app.route("/choose/<nomeusuario>")
 def choose(nomeusuario):
-    return render_template("choose.html")
+    id_pessoa = pegaId(nomeusuario)
+    relatorio = makeRelatorio(id_pessoa)
+    return render_template("choose.html", relatorio = relatorio)
 
 @app.route("/teste/<nomeusuario>/<materia>", methods = ['POST', 'GET'])
 def teste(nomeusuario, materia):
@@ -128,13 +159,16 @@ def teste(nomeusuario, materia):
     if request.method == "POST":
         acertou = request.form['info_data']
         id_question = request.form['id_question']
+        nv_questao = request.form['nivel_question']
 
-        addQuestion(nomeusuario, id_question)
+        addQuestion(nomeusuario, id_question, acertou, nv_questao)
+        proximoNivel = descobrirProximoNive(nv_questao, acertou)
+        id_user = pegaId(nomeusuario)
 
-        questao = buscaQuestao(materia, pegaId(nomeusuario))
+        questao = buscaQuestao(materia, id_user , proximoNivel)
 
         if questao == None:
-            return "acabou"
+            return "end"
         else: 
             return questao
 

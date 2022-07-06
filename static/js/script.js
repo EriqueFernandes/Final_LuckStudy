@@ -27,13 +27,13 @@ submit_btn.onclick = (event) => {
 }
 
 up_btn.onclick = () => {
-    if(pixels > 15 * totalNomes) return
+    if(pixels > 15 * (totalNomes - 1)) return
     pixels += 15;
     box_names.style = `transform: translateY(${pixels}px);`;
 }
 
 down_btn.onclick = () => {
-    if(pixels < - 15 * totalNomes) return
+    if(pixels < -15 * (totalNomes - 1)) return
     pixels -= 15;
     box_names.style = `transform: translateY(${pixels}px);`;
 }

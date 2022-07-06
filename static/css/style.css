@@ -1,64 +1,104 @@
-body{
+body {
     background: linear-gradient(#222, #000);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;        
+    align-items: center;
     height: 100vh;
 }
 
-section{
-    height:80vh;
+section {
+    height: 80vh;
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-h2{
+h2 {
     margin-top: 8%;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px #fff;
+    font-size: 2rem;
+    text-shadow: 4px 4px 10px #9c88ff;
+    border-bottom: 3px solid #192a56;
+    border-radius: 25%;
+    box-shadow: 3px 3px 20px #fff;
+    width: 50%;
+    height: 20%;
+    background-color: #718093;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
 }
 
-h3{
+h3 {
     font-size: 2rem;
 }
 
-ul{
+p{
+    font-size: 1.4rem;
+    color: #F8EFBA; 
+}
+
+ul {
     display: flex;
     flex-direction: column;
 }
 
-li{
+li {
     list-style: none;
 }
 
-input{
-    width: 60%;
-    height: 30%;
-    margin: 1%;
+input {
+    height: 40%;
+    border: none;
+    background-color: #dcdde1;
 }
 
-input[type= "submit"]{
-    background-color: #000;
-    color: #fff;
+input[type="text"] {
+    font-size: 1.5rem;
+    text-indent: 5%;
+    color: #192a56;
+    width: 80%;
+    box-shadow: 1px 1px 5px #000;
 }
 
-input[type= "submit"]:hover{
-    transform: scale(1.1);
+input[type="text"]::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #82589F;
+    opacity: 1;
+    /* Firefox */
+}
+
+input[type="text"]:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #82589F;
+}
+
+input[type="text"]::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #82589F;
+}
+
+input[type="submit"] {
+    width: 40%;
+    font-size: 1.3rem;
+}
+
+input[type="submit"]:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 5px #c2c2c2;
+    transform: scale(1.1);
 }
 
-a{
+a {
     text-decoration: none;
     color: #fff;
-    text-shadow: 2px 2px #000;
+    text-shadow: 2px 2px 1px#000;
 }
 
-.container{
-    background-color: #eb4d4b;
+.container {
+    background-color: #8e44ad;
+    box-shadow: 1px 1px 5px #d2dae2;
     display: flex;
     height: 40%;
     width: 40%;
@@ -67,25 +107,36 @@ a{
     align-items: center;
 }
 
-.login{
+.container_input {
+    height: 70%;
+    width: 70%;
     display: flex;
-    height: 40%;
+    margin-top: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    height: 60%;
     width: 100%;
     align-items: center;
     flex-direction: column;
 }
 
-.usuarios{
+.usuarios {
     display: flex;
-    background-color: #30336b;
-    width: 30%;
-    height: 90%;
+    background-color: #8e44ad;
+    box-shadow: 1px 1px 5px #d2dae2;
+    height: 40%;
+    width: 40%;
     flex-direction: column;
     align-items: center;
 }
 
-.name_users{
-    display: flex   ;
+.name_users {
+    display: flex;
     align-self: flex-start;
     justify-content: space-around;
     overflow: hidden;
@@ -93,13 +144,12 @@ a{
     width: 100%;
 }
 
-.container_buttons{
+.container_buttons {
     display: flex;
     flex-direction: column;
-    margin-top: 40%;
 }
 
-#segundo_plano{
+#segundo_plano {
     display: none;
     width: 100%;
     height: 100%;
@@ -108,8 +158,8 @@ a{
     position: absolute;
 }
 
-#show_this{
-    background-color: #7efff5;
+#show_this {
+    background-color: #FC427B;
     width: 30%;
     height: 10%;
     position: absolute;
@@ -119,7 +169,7 @@ a{
     align-items: center;
 }
 
-.btns_control{
+.btns_control {
     background-color: #c7ecee;
     color: #000;
     font-size: 2rem;
@@ -127,31 +177,32 @@ a{
     margin: 5%;
 }
 
-.btns_control:hover{
+.btns_control:hover {
     cursor: pointer;
 }
 
-#btn_up{
+#btn_up {
     transform: rotate(-90deg);
 }
 
-#btn_down{
+#btn_down {
     transform: rotate(90deg);
 }
 
 
-#home{
+#home {
     align-self: flex-start;
     margin-left: 10%;
     width: 10%;
     height: 10%;
     border: none;
     font-size: 20px;
-    color: #fff ;
+    color: #fff;
     text-shadow: 2px 2px #000;
     background-color: #535c68;
 }
 
-#home:hover{
+#home:hover {
     cursor: pointer;
+    box-shadow: 3px 3px 20px #c2c2c2;
 }

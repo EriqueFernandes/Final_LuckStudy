@@ -17,18 +17,19 @@
                 {% if invalido %}
                 <p>{{invalido}}</p>
                 {% endif %}
-                <label for="username"></label>
-                <input type="text" id="username" name="username" placeholder="Nome">
-                <input type="submit" id="submit_btn">
+                <div class="container_input">
+                    <input type="text" id="username" name="username" placeholder="Digite seu nome!">
+                    <input type="submit" id="submit_btn">
+                </div>
             </div>
         </form>
         <div class="usuarios">
             <h2>Usuários</h2>
             <div class="name_users">
                 <ul id="lista_users">
-                    {%for jogador in jogadores%}
+                    {%for pessoa in pessoas%}
 
-                    <li><a href="/choose/{{jogador['nome']}}">{{jogador["nome"]}}</a></li>
+                    <li><a href="/choose/{{pessoa['nome']}}">{{pessoa["nome"]}}</a></li>
                     
                     {% endfor %}
                 </ul>

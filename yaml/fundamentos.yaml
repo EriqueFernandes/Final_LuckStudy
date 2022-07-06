@@ -1,7 +1,7 @@
 #Fundamentos da Matemática - Questões
 id: 1
 texto: 'Qual das seguintes frases abaixo NÃO é uma proposição?'
-level: 1
+nivel: 1
 options:
   - A : '2 + 3 = 1'
     correct: False
@@ -21,7 +21,7 @@ options:
 ---
 id: 2
 texto: 'Qual o dígito das unidades de \( 2^{961} \)?'
-level: 1
+nivel: 1
 options:
   - A : '9'
     correct: False
@@ -41,7 +41,7 @@ options:
 ---
 id: 3
 texto: 'Sobre a equação \( \sqrt{x^2 +1} = x + 3, x \in \mathbb{R} \), podemos afirmar que:'
-level: 1
+nivel: 1
 options:
   - A : 'Há duas soluções para x.'
     correct: False
@@ -61,7 +61,7 @@ options:
 ---
 id: 4
 texto: '(OBMEP - Adaptada) Qual a negação de "Todos os meus chapéus são verdes"?'
-level: 1
+nivel: 1
 options:
   - A : 'Nenhum chapéu meu é verde'
     correct: False
@@ -81,7 +81,7 @@ options:
 ---
 id: 5
 texto: 'Miguel tinha em sua carteira várias notas de 2, 5, 10, 20 e 50 reais. Ele pagou 63 reais por um livro com seis dessas notas, sem ter troco a receber. Quantas notas de 2 reais ele usou?'
-level: 2
+nivel: 2
 options:
   - A : 1
     correct: False
@@ -125,7 +125,7 @@ options:
 ---
 id: 6
 texto: Os edifícios A e B não possuem janelas em suas laterais e têm o mesmo número de janelas na parte de trás. O edifício A tem mais janelas na frente do que atrás; já o edifício B tem mais janelas atrás do que na frente. Qual é o número total de janelas nos dois edifícios?
-level: 2
+nivel: 2
 options:
   - A : 21
     correct: False
@@ -157,7 +157,7 @@ options:
 ---
 id: 7
 texto: Uma melancia média e duas melancias grandes custam o mesmo que oito melancias pequenas. Uma melancia média e uma pequena custam o mesmo que uma melancia grande. Quantas melancias pequenas podem ser compradas pelo mesmo preço de uma melancia grande?
-level: 2
+nivel: 2
 options:
   - A : 3
     correct: True
@@ -189,7 +189,7 @@ options:
 ---
 id: 8
 texto: De quantas maneiras podemos trocar uma nota de R$ 20,00 por moedas de R$ 0,10 e R$ 0,25?
-level: 3
+nivel: 3
 options:
   - A : 21
     correct: False
@@ -221,7 +221,7 @@ options:
 ---
 id: 9
 texto: Observe que na igualdade 360 = 90 + 120 + 150 as parcelas são proporcionais a 3, 4 e 5. De quantas maneiras podemos escrever 360 como a soma de três parcelas inteiras, em ordem crescente, e proporcionais a três números inteiros positivos consecutivos?
-level: 3
+nivel: 3
 options:
   - A : 12
     correct: False
@@ -289,7 +289,7 @@ options:
 ---
 id: 10
 texto: Qual é o maior valor possível para o máximo divisor comum de dois números naturais cujo produto é 6 000?
-level: 3
+nivel: 3
 options:
   - A : 
     correct: False
@@ -354,7 +354,7 @@ options:
 ---
 id: 11
 texto: 'Ao redor de uma mesa sentaram-se os 17 participantes de um debate. Alguns deles sempre dizem a verdade, e os demais sempre mentem. Todos iniciaram o debate dizendo: “Meus dois vizinhos mentem”. No máximo, quantos mentirosos havia entre os participantes?'
-level: 2
+nivel: 2
 options:
   - A : 10
     correct: False
@@ -428,7 +428,7 @@ texto:  'Vovó Vera quis saber qual de suas cinco netinhas tinha feito um desenh
         • Rafaela: Não foi a Luísa.
         • Vitória: Luísa não está dizendo a verdade.
         Se apenas uma das netinhas mentiu, quem fez o desenho?'
-level: 2
+nivel: 2
 options:
   - A : Emilia
     correct: False
@@ -474,7 +474,7 @@ texto: 'Um supermercado vende rolos idênticos de papel higiênico e faz as prom
         4. Pague 21 e leve 24.
         5. Pague 31 e leve 36.
         Qual é a promoção mais vantajosa?'
-level: 2
+nivel: 2
 options:
   - A : 2
     correct: False
@@ -494,7 +494,7 @@ options:
 ---
 id: 14
 texto: Para obter tinta de cor laranja,devem-se misturar 3 partes de tinta vermelha com 2 partes de tinta amarela. Para obter tinta de cor verde, devem-se misturar 2 partes de tinta azul com 1 parte de tinta amarela. Para obter tinta de cor marrom, deve-se misturar a mesma quantidade de tintas laranja e verde. Quantos litros de tinta amarela são necessários para obter 30 litros de tinta marrom?
-level: 2
+nivel: 2
 options:
   - A : 8
     correct: False
@@ -514,7 +514,7 @@ options:
 ---
 id: 15
 texto: Um livro, com páginas numeradas em sequência, está dividido em três capítulos. Cada um dos capítulos tem a mesma quantidade de páginas. A primeira página do Capítulo 1 tem o número 1. A soma do número da primeira página do Capítulo 2 com o número da primeira página do Capítulo 3 é 1052. Qual é o número da primeira página do Capítulo 3?
-level: 2 
+nivel: 2 
 options:
   - A : 699
     correct: False
@@ -558,7 +558,7 @@ options:
 ---
 id: 16
 texto: Em uma festa havia somente 3 mulheres, e 99% dos convidados eram homens. Quantos homens devem deixar a festa para que a porcentagem de homens passe a ser igual a 98% do total de participantes?
-level: 2
+nivel: 2
 options:
   - A : 3
     correct: False
@@ -578,7 +578,7 @@ options:
 ---
 id: 17 
 texto: Em uma competição, as partidas têm duração de 60 minutos, e cada time tem sempre 5 jogadores em campo. Em determinada partida, um time inscreveu 8 atletas e foram feitas várias substituições de modo que cada um deles jogou a mesma quantidade de tempo. Quanto tempo cada um deles jogou nessa partida?
-level: 2
+nivel: 2
 options:
   - A : 27 minutos e 30 segundos
     correct: False
@@ -656,7 +656,7 @@ options:
 ---
 id: 18
 texto: Uma caixa contém 10 bolas verdes, 10 amarelas, 10 bolas azuis e 10 bolas vermelhas. Joãozinho quer retirar uma certa quantidade de bolas dessa caixa, sem olhar, para ter a certeza de que, entre elas, haja um grupo de sete bolas com três cores diferentes, sendo três bolas de uma cor, duas bolas de uma segunda cor e duas bolas de uma terceira cor. Qual é o número mínimo de bolas que Joãozinho deve retirar da caixa?
-level: 2
+nivel: 2
 options:
   - A : 14
     correct: False
@@ -728,7 +728,7 @@ options:
 ---
 id: 19
 texto: Em um clube, as escolinhas de futebol e de basquete têm exatamente quatro atletas em comum. Eles correspondem a 10% dos atletas da escolinha de futebol e a 25% dos atletas da escolinha de basquete. Quantos atletas participam de apenas uma dessas escolinhas?
-level: 2
+nivel: 2
 options:
   - A : 40
     correct: False
@@ -754,7 +754,7 @@ options:
 ---
 id: 20
 texto: Janaína escreveu no quadro-negro dois números cuja soma é igual a 1357. Ela observou que um desses números poderia ser obtido apagando o algarismo das unidades do outro. Qual é esse algarismo?
-level: 2
+nivel: 2
 options:
   - A : 4
     correct: False
@@ -774,7 +774,7 @@ options:
 ---
 id: 21
 texto: Juliana começou a escrever, em ordem crescente, uma lista dos números inteiros positivos cuja soma dos algarismos é divisível por 5. Sua lista começou com 5, 14, 19, 23, e terminou quando ela encontrou dois números consecutivos. Qual é a soma dos algarismos do penúltimo número dessa lista?
-level: 2
+nivel: 2
 options:
   - A : 10
     correct: False
@@ -860,7 +860,7 @@ options:
 ---
 id: 22
 texto: Bruno tem 5 figurinhas idênticas com a bandeira da Alemanha, 6 com a bandeira do Brasil e 4 com a da Colômbia. Ele quer fazer um pacote com pelo menos 3 dessas fi gurinhas. De quantas maneiras ele pode fazer esse pacote?
-level: 2
+nivel: 2
 options:
   - A : 110
     correct: False
@@ -932,7 +932,7 @@ options:
 ---
 id: 23
 texto: Se a - b  = 1 e ab = 1, qual é o valor de a^2 b^2 + ?
-level: 3 
+nivel: 3 
 options:
   - A : 1
     correct: False
@@ -952,7 +952,7 @@ options:
 ---
 id: 24
 texto: Ana, Beatriz e Cristina treinam numa pista de corrida. Ana corre sempre com o dobro da velocidade de Beatriz e com o triplo da velocidade de Cristina. Um dia, Ana partiu do fim da pista, correndo em sentido contrário ao de suas amigas, no mesmo instante em que Beatriz e Cristina partiram do início da pista. Após o treino, Ana disse para suas amigas que tinha percorrido 20 metros desde o momento em que cruzou com Beatriz até o momento em que cruzou com Cristina. Quantos metros tem a pista?
-level: 3
+nivel: 3
 options:
   - A : 200
     correct: False
@@ -1000,7 +1000,7 @@ options:
 ---
 id: 25
 texto: Somando 1 a um certo número natural, obtemos um múltiplo de 11. Subtraindo 1 desse mesmo número, obtemos um múltiplo de 8. Qual é o resto da divisão do quadrado desse número por 88?
-level: 3
+nivel: 3
 options:
   - A : 0
     correct: False
@@ -1048,7 +1048,7 @@ options:
 ---
 id: 26
 texto: Uma caixa contém nove bolas idênticas numeradas de 1 a 9. Uma primeira bola é sorteada, seu número é anotado e a bola é devolvida à caixa. Repete-se esse procedimento mais duas vezes, anotando-se também os números da segunda e terceira bolas sorteadas. Qual é a probabilidade de que a soma dos números nas duas primeiras bolas sorteadas não seja um múltiplo de 3 e a soma dos números nas três bolas sorteadas seja um múltiplo de 3?
-level: 3
+nivel: 3
 options:
   - A : 2/9
     correct: True
@@ -1106,7 +1106,7 @@ texto: 'João tem 148 copos dispostos em fi la, cada um contendo um grão de fei
           também descartando os copos vazios.
           Quando a fi la se reduzir a dois copos, quantos feijões
           estarão no primeiro copo?'
-level: 3
+nivel: 3
 options:
   - A : 4
     correct: False
@@ -1126,7 +1126,7 @@ options:
 ---
 id: 28
 texto: Para quantos conjuntos {a,b ,c } de três números naturais é verdade que abc = 2310 ?
-level: 3
+nivel: 3
 options:
   - A : 30
     correct: False
@@ -1166,7 +1166,7 @@ options:
 ---
 id: 29
 texto: A professora decidiu premiar, por sorteio, dois dentre os 20 alunos da turma de João. Para o sorteio, 20 bolas com os números dos alunos foram colocadas em uma caixa. A primeira bola sorteada pela professora caiu no chão e se perdeu, sem que ninguém visse seu número. Ela decidiu fazer o sorteio com as bolas restantes. Qual é a probabilidade de que João tenha sido um dos dois alunos sorteados?
-level: 3
+nivel: 3
 options:
   - A : 1/10
     correct: True

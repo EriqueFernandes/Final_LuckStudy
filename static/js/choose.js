@@ -1,7 +1,7 @@
 const btn_home = document.querySelector("#home");
 
 btn_home.onclick = () => {
-    window.location.href = "/"
+    window.location.href = "/login"
 }
 
 document.querySelectorAll(".butoes").forEach((btn) => {
@@ -9,6 +9,7 @@ document.querySelectorAll(".butoes").forEach((btn) => {
         let url_dividida = location.href.split("/");
         const nome = url_dividida[4];
         let materia = null;
+
         switch (btn.textContent) {
             case "Geometria analítica":
                 materia = "ga"
@@ -28,8 +29,8 @@ document.querySelectorAll(".butoes").forEach((btn) => {
             default:
                 break
         }
+
         url_dividida = url_dividida.splice(0, url_dividida.length - 1)
-        console.log(url_dividida)
         url_dividida[url_dividida.length - 1] = `teste/${nome}/${materia}`
         location.href = url_dividida.join("/")
     }

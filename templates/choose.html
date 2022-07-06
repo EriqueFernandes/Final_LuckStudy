@@ -12,17 +12,97 @@
 
 <body>
     <button id="home">SAIR</button>
-    <button class="butoes" id="btn_1" >Introdução à computação</button>
-    <button class="butoes" id="btn_2" >Cálculo em uma variável</button>
-    <button class="butoes" id="btn_3" >Geometria analítica</button>
-    <button class="butoes" id="btn_4" >Fundamentos da matemática</button>
-    <button class="butoes" id="btn_5" >Introdução à modelagem matemática</button>
-    {% if materia %}
-
-    <p>{{materia}}</p>
-    
+    <div class="container_buttons">
+        <button class="butoes" id="btn_1">Introdução à computação</button>
+        <button class="butoes" id="btn_2">Cálculo em uma variável</button>
+        <button class="butoes" id="btn_3">Geometria analítica</button>
+        <button class="butoes" id="btn_4">Fundamentos da matemática</button>
+        <button class="butoes" id="btn_5">Introdução à modelagem matemática</button>
+    </div>
+    {% if relatorio %}
+    <div class="container_relatorio">
+        <h2>Relatório</h2>
+        <div id="exibition">
+            <div class="container_questoes">
+                <h3 id="ic">Introdução à computação</h3>
+            </div>
+            <div class="container_questoes">
+                <h3 id="calc">Cálculo em uma variável</h3>
+            </div>
+            <div class="container_questoes">
+                <h3 id="ga">Geometria analítica</h3>
+            </div>
+            <div class="container_questoes">
+                <h3 id="fund">Fundamentos da matemática</h3>
+            </div>
+            <div class="container_questoes">
+                <h3 id="imm">Introdução à modelagem matemática</h3>
+            </div>
+        </div>
+    </div>
     {% endif %}
     <script src="../static/js/choose.js"></script>
+    <script>
+        let dados = {{ relatorio | tojson }}
+
+        const show_here = document.querySelector("#exibition");
+
+        const criaParagrafo = (textoPassado) => {
+            const paragraph = document.createElement("p");
+            if (textoPassado == "true") {
+                paragraph.textContent = "Acertou!";
+                paragraph.style = "background-color: #6ab04c;"
+            }
+            else if (textoPassado == "false") {
+                paragraph.textContent = "Errou!";
+                paragraph.style = "background-color: #EA2027;"
+            }
+            else {
+                paragraph.textContent = textoPassado;
+            }
+            return paragraph;
+        }
+
+        const descobrirMateria = (ultimoDigito) => {
+            switch (ultimoDigito) {
+                case 0:
+                    return "ga"
+                case 1:
+                    return "imm"
+                case 2:
+                    return "ic"
+                case 3:
+                    return "fund"
+                case 4:
+                    return "calc"
+            }
+        }
+
+        const criandoComponente = (acertoPassado, idQuestao, nivel) => {
+            const questao = document.createElement('div');
+            questao.classList.add("questao")
+            const divNova = document.createElement("div");
+            divNova.appendChild(criaParagrafo(`Questão ${idQuestao}`))
+            divNova.appendChild(criaParagrafo(`Dificuldade ${nivel}`));
+            questao.appendChild(divNova)
+            questao.appendChild(criaParagrafo(acertoPassado));
+
+            return questao;
+        }
+
+        const desenhandoRelatorio = () => {
+            if(dados == null) return;
+            for (const obj of dados) {
+                questao = criandoComponente(obj["acertou"], obj["id_questao"], obj["nivel"])
+
+                const materia = descobrirMateria(parseInt(obj["id_questao"][obj["id_questao"].length - 1]))
+
+                document.querySelector(`#${materia}`).insertAdjacentElement("afterend", questao)
+            }
+        }
+
+        desenhandoRelatorio()
+    </script>
 </body>
 
 </html>

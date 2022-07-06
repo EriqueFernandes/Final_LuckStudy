@@ -14,7 +14,7 @@
 
 <body>
     <button id="home">SAIR</button>
-    <h1> Nível {{data["level"]}}</h1>
+    <h1>Questão {{data["id"]}}</h1>
     <form method="get">
         <div>
             <h2>{{data["texto"]}}</h2>
@@ -53,6 +53,8 @@
         const buttonNext = document.querySelector("#next");
         const btn_home = document.querySelector("#home");
 
+        let respostaServidor = null;
+
         const verificaRespostaCorreta = () => {
             for (let i = 0; i < dados["options"].length; i++) {
                 if (dados["options"][i]["correct"]) {
@@ -63,23 +65,27 @@
 
         const limparBackground = () => {
             document.querySelector("#motivo").textContent = " "
-            for(const inputRadio of document.querySelectorAll("input")){
-                if(inputRadio.checked){
+            for (const inputRadio of document.querySelectorAll("input")) {
+                if (inputRadio.checked) {
                     inputRadio.checked = false;
                 }
             }
 
-            for(const titulo of document.querySelectorAll("label")){
-                for(const classe of titulo.classList){
-                    if(classe == "acertou"){
+            for (const titulo of document.querySelectorAll("label")) {
+                for (const classe of titulo.classList) {
+                    if (classe == "acertou") {
                         titulo.classList.remove("acertou")
                     }
-                    else if(classe == "errou"){
+                    else if (classe == "errou") {
                         titulo.classList.remove("errou")
                     }
                     else continue;
                 }
             }
+        }
+
+        const newTypeSet = () => {
+            MathJax.typeset();
         }
 
         const desenharNovaQuestao = (questao) => {
@@ -93,12 +99,12 @@
             allLabel[3].textContent = textos[3]["D"]
 
             document.querySelector("h2").textContent = questao["texto"]
-            document.querySelector("h1").textContent =  `Questão ${questao["id"]}`
-            console.log(dados)
+            document.querySelector("h1").textContent = `Questão ${questao["id"]}`
             dados = questao
-            console.log(dados)
             acertou = null
             controle = false;
+
+            newTypeSet()
 
             verificaRespostaCorreta()
         }
@@ -111,7 +117,7 @@
             event.preventDefault()
 
             const alternativas = document.querySelectorAll(".alternativas");
-            
+
             if (controle) return;
 
             for (let i = 0; i < alternativas.length; i++) {
@@ -128,29 +134,34 @@
                     document.querySelectorAll("label")[respostaCorreta].classList.add("acertou")
                     document.querySelector("#motivo").textContent = dados["options"][i]["reason"]
 
+                    newTypeSet()
                     controle = true
                 }
             }
+
+            $.post("", {
+                info_data: acertou,
+                id_question: dados["id"],
+                nivel_question: dados["nivel"]
+            })
+                .then((response) => {
+                    respostaServidor = response;
+                })
         }
 
         buttonNext.onclick = (event) => {
             event.preventDefault()
+
             if (acertou == null) return;
 
-            $.post("", {
-                info_data: acertou,
-                id_question: dados["id"]
-                //nivel_question: dados["nivel"]
-            })
-                .then((response) => {
-                    if( response == "acabou"){
-                        window.location.href = `/choose/${window.location.href.split("/")[4]}`
-                    }
-                    else{
-                        limparBackground()
-                        desenharNovaQuestao(response)
-                    }
-                })
+            if (respostaServidor == "end") {
+                window.location.href = `/choose/${window.location.href.split("/")[4]}`
+            }
+
+            else {
+                limparBackground()
+                desenharNovaQuestao(respostaServidor)
+            }
         }
 
         verificaRespostaCorreta()

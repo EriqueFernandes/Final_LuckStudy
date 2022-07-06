@@ -1,7 +1,5 @@
 body{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
     width: 100%;
@@ -9,7 +7,7 @@ body{
 }
 
 button{
-    width: 30%;
+    width: 60%;
     height: 10%;
     border: none;
     font-size: 20px;
@@ -19,30 +17,109 @@ button{
 
 button:hover{
     transform: scale(1.1);
-    box-shadow: 3px 3px 20px #c2c2c2;
+    box-shadow: 3px 3px 20px #ffcccc;
     cursor: pointer;
 }
 
+h2{
+    font-size: 3rem;
+    color: #1B1464;
+}
+
+h3{
+    font-size: 1.4rem;
+    margin: 0 0 5% 0;
+}
+
+.container_buttons{
+    display: flex;
+    width: 30%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container_relatorio{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffcccc;
+    width: 30%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container_questoes{
+    display: flex;
+    flex-direction: column;
+    background-color: #686de0;
+    padding: 3%;
+    margin: 3%;
+}
+
+.questao{
+    display: flex;
+    background-color: #dff9fb;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3% 5%;
+    padding: 0 5%;
+    box-shadow: 0 0 2px #000;
+    text-shadow: 0 0 2px #fff;
+    font-size: 1.2rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 1px 1px 5px #3d3d3d; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #182C61; 
+    border-radius: 10px;
+  }
+
+#exibition{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    flex-direction: column;
+    overflow: auto;
+}
+
 #btn_1{
-    background-color: #ff0ff0;
+    background-color: #c56cf0;
 }
 
 #btn_2{
-    background-color: #c2f456;
+    background-color: #32ff7e;
 }
 #btn_3{
-    background-color: #ff3242;
+    background-color: #ff3838;
 }
 #btn_4{
-    background-color: #00f31f;
+    background-color: #fff200;
 }
 #btn_5{
-    background-color: #2c3ecf;
+    background-color: #7158e2;
 }
 
 #home{
     align-self: flex-start;
     margin-left: 10%;
+    margin-top: 5%;
     width: 10%;
     height: 10%;
     border: none;
@@ -54,4 +131,5 @@ button:hover{
 
 #home:hover{
     cursor: pointer;
+    transform: scale(1);
 }

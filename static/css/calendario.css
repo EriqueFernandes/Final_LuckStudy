@@ -26,6 +26,8 @@ h3{
     font-size: 2rem;
 }
 
+
+
 button{
     margin: 5%;
     font-size: 3em;
@@ -167,6 +169,11 @@ button:hover{
     background-color: #535c68;
     box-shadow: none;
     z-index: 3;
+}
+
+#homepage:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 20px #c2c2c2;
 }
 
 @keyframes exibindo_dia {

@@ -1,5 +1,6 @@
 # Questões - Introdução à Computação
 id: 1
+nivel: 1
 texto: 'Na linguagem C, qual das funções abaixo é utilizada especificamente para mostrar resultados (outputs) ao usuário?'
 options:
   - A : 'scanf()'
@@ -19,6 +20,7 @@ options:
     reason: 'Essa não é a função que especificamente faz isso, apesar de poder ter alguma em seu escopo que o faz.'
 ---
 id: 2
+nivel: 1
 texto: if((a < 10 && a > 0) || b < 4){...}'. Na linguagem C, qual um possível valor para as variáveis a e b para que a função if seja executada,supondo-as variáveis do tipo int?
 options:
   - A : 'a = -3, b = 5'
@@ -38,6 +40,7 @@ options:
     reason: 'Considere alguma das respostas anteriores! Algo pode ter passado despercebido!'
 ---
 id: 3
+nivel: 2
 texto: Qual das seguintes tags em HTML é feita para indicar uma tabela?
 options:
   - A : '<html></html>'
@@ -57,6 +60,7 @@ options:
     reason: 'A tag correta é <table></table>.'
 ---
 id: 4
+nivel: 3
 texto: Qual das seguintes tags em HTML é feita para indicar uma tabela?
 options:
   - A : '<html></html>'
@@ -76,6 +80,7 @@ options:
     reason: 'A tag correta é <table></table>.'
 ---
 id: 5
+nivel: 3
 texto: 'Qual das liguagens abaixo é considerada uma linguagem consultiva?'
 options:
   - A : 'C'
