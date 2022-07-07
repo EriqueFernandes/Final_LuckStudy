@@ -26,8 +26,6 @@ h3{
     font-size: 2rem;
 }
 
-
-
 button{
     margin: 5%;
     font-size: 3em;
@@ -168,7 +166,7 @@ button:hover{
     text-shadow: 2px 2px #000;
     background-color: #535c68;
     box-shadow: none;
-    z-index: 3;
+    z-index: 1;
 }
 
 #homepage:hover{

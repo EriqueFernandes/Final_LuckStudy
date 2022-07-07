@@ -14,33 +14,40 @@
 
 <body>
     <button id="home">SAIR</button>
-    <h1>Questão {{data["id"]}}</h1>
-    <form method="get">
-        <div>
-            <h2>{{data["texto"]}}</h2>
-            <div>
-                <input class="alternativas" type="radio" id="alternativa_1" name="alternativa">
-                <label for="alternativa_1">{{data["options"][0]['A']}}</label>
-            </div>
-            <div>
-                <input class="alternativas" type="radio" id="alternativa_2" name="alternativa">
-                <label for="alternativa_2">{{data["options"][1]['B']}}</label>
-            </div>
-            <div>
-                <input class="alternativas" type="radio" id="alternativa_3" name="alternativa">
-                <label for="alternativa_3">{{data["options"][2]['C']}}</label>
-            </div>
-            <div>
-                <input class="alternativas" type="radio" id="alternativa_4" name="alternativa">
-                <label for="alternativa_4">{{data["options"][3]['D']}}</label>
-            </div>
+    <section>
+        <div class="container">
+            <h1>Questão {{data["id"]}}</h1>
+            <form method="get">
+                <div>
+                    <h2>{{data["texto"]}}</h2>
+                    <div>
+                        <input class="alternativas" type="radio" id="alternativa_1" name="alternativa">
+                        <label for="alternativa_1">{{data["options"][0]['A']}}</label>
+                    </div>
+                    <div>
+                        <input class="alternativas" type="radio" id="alternativa_2" name="alternativa">
+                        <label for="alternativa_2">{{data["options"][1]['B']}}</label>
+                    </div>
+                    <div>
+                        <input class="alternativas" type="radio" id="alternativa_3" name="alternativa">
+                        <label for="alternativa_3">{{data["options"][2]['C']}}</label>
+                    </div>
+                    <div>
+                        <input class="alternativas" type="radio" id="alternativa_4" name="alternativa">
+                        <label for="alternativa_4">{{data["options"][3]['D']}}</label>
+                    </div>
+                </div>
+                <div class="container_buttons">
+                    <button id="confirmar">Enviar</button>
+                    <button id="next" type="submit">Próxima</button>
+                </div>
+            </form>
         </div>
-        <div>
-            <button id="confirmar">Enviar</button>
-            <button id="next" type="submit">Próxima</button>
+        <div id="mostrar_reason">
+            <p id="motivo"></p>
         </div>
-    </form>
-    <p id="motivo"></p>
+        <div id="segundo_plano"></div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         let dados = {{ data | tojson }}
@@ -48,12 +55,11 @@
         let controle = false;
         let acertou = null
         let respostaCorreta = null;
+        let respostaServidor = null;
 
         const buttonVerificar = document.querySelector("#confirmar");
         const buttonNext = document.querySelector("#next");
         const btn_home = document.querySelector("#home");
-
-        let respostaServidor = null;
 
         const verificaRespostaCorreta = () => {
             for (let i = 0; i < dados["options"].length; i++) {
@@ -109,6 +115,16 @@
             verificaRespostaCorreta()
         }
 
+        const show_reason = () => {
+            document.querySelector("#mostrar_reason").style = "display: flex;";
+            document.querySelector("#segundo_plano").style = "display:flex;";
+
+            document.querySelector("#segundo_plano").onclick = () => {
+                document.querySelector("#mostrar_reason").style = "display: none;";
+                document.querySelector("#segundo_plano").style = "display:none;";
+            }
+        }
+
         btn_home.onclick = () => {
             window.location.href = `/choose/${window.location.href.split("/")[4]}`
         }
@@ -133,6 +149,7 @@
 
                     document.querySelectorAll("label")[respostaCorreta].classList.add("acertou")
                     document.querySelector("#motivo").textContent = dados["options"][i]["reason"]
+                    show_reason()
 
                     newTypeSet()
                     controle = true

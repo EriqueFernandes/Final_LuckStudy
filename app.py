@@ -74,18 +74,19 @@ def buscaQuestao(materia, idPessoa, nivelpassado = None):
     return questaoEscolhida
 
 def descobrirProximoNive(nivelAnterior, acertouAnterior):
-    if nivelAnterior == 1:
-        if acertouAnterior == True:
+    nivelAnterior = str(nivelAnterior)
+    if nivelAnterior == "1":
+        if acertouAnterior == "true":
             return 2
         else:
             return 1 
-    elif nivelAnterior == 2:
-        if acertouAnterior == True:
+    elif nivelAnterior == "2":
+        if acertouAnterior == "true":
             return 3
         else:
             return 1 
     else:
-        if acertouAnterior == True:
+        if acertouAnterior == "true":
             return 3
         else:
             return 2 

@@ -3,7 +3,6 @@ body {
     background: linear-gradient(#222, #000);
     align-items: center;
     flex-direction: column;
-    height: 100vh;
 }
 
 h1 {
@@ -15,8 +14,9 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 2%;
+    text-indent: 5%;
 }
 
 label {
@@ -27,9 +27,9 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 80%;
-    height: 50%;
+    width: 100%;
     background-color: #ffb8b8;
+    padding: 3%;
 }
 
 p{
@@ -37,12 +37,13 @@ p{
 }
 
 button {
-    margin: 3% 0 10% 3%;
     border: none;
     background-color: #3d3d3d;
     color: #FDA7DF;
     width: 30%;
-    height: 30%;
+    height: 100%;
+    font-size:1.5rem;
+    margin-top: 2%;
 }
 
 button:hover{
@@ -55,6 +56,29 @@ input{
     margin: 1% 5%;
 }
 
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+
+.container_buttons{
+    display: flex;
+    height: 30%;
+    justify-content: space-evenly;
+}
+
 .acertou{
     background-color: #2ed573;
 }
@@ -63,9 +87,51 @@ input{
     background-color: #ff4757;
 }
 
+#mostrar_reason{
+    display: none;
+    background-color: #686de0;
+    width: 80%;
+    max-height: 65%;
+    z-index: 3;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 1px 1px 5px #3d3d3d; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #182C61; 
+    border-radius: 10px;
+  }
+
+#segundo_plano {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    position: absolute;
+}
+
+#motivo{
+    color: #fff;
+    width: 80%;
+    text-indent: 5%;
+    transform: translateY(20%);
+}
+
 #home{
-    align-self: flex-start;
-    margin-left: 10%;
     width: 10%;
     height: 10%;
     border: none;
@@ -73,6 +139,10 @@ input{
     color: #fff ;
     text-shadow: 2px 2px #000;
     background-color: #535c68;
+    position: absolute;
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
 #home:hover{
