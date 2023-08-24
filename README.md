@@ -1,4 +1,6 @@
 # LuckStudy
+
+## Repositório destinado ao site de banco de questões, inicialmente voltado para o estudo de matérias do primeiro período de Matemática Aplicada na FGV.
 <br>
 
 <p> LuckStudy é um site de banco de questões, inicialmente voltado para o estudo de matérias do primeiro período de Matemática Aplicada na FGV.
