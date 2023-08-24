@@ -6,7 +6,7 @@
 <p> LuckStudy é um site de banco de questões, inicialmente voltado para o estudo de matérias do primeiro período de Matemática Aplicada na FGV.
 Sua ideia é gerar questões e suas possíveis respostas de maneira colaborativa, a partir de arquivos YAML e formatação Tex. Assim, nesse servidor cada um poderia elaborar questões e repostas nesses arquivos.</p>
 
-# Método de construção do projeto.
+### Método de construção do projeto.
 <h6> Linguagens utilizadas: HTML, CSS, JavaScript(Bootstrap, MathJax, Jinja, Python(Flask, Yaml), arquivos .yaml. </h6>
 <br>
 <p> Inicialmente, a página inicial foi construída com a aplicação do Bootstrap 5, com intuito de gerar o padrão para o site. O site possui a página inicial com a apresentação geral e botões para todas as seções do site, que são: A própria página inicial, as páginas das questões de cada matéria, uma página para obter contatos com os administradores e outra página para entender para que foi criada.</p>
